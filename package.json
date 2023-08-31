@@ -24,8 +24,8 @@
 		"dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
 		"release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
 		"lint": "eslint .",
-		"test": "vitest run --config ./vitest.config.js",
-		"test:watch": "vitest watch --config ./vitest.config.js",
+		"test": "vitest run",
+		"test:watch": "vitest watch",
 		"postinstall": "nuxt prepare & npm run dev:prepare",
 		"reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && nuxt cleanup && nuxt cleanup playground && npm install"
 	},
