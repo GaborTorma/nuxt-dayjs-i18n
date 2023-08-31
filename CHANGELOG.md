@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.5
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.0.4...v1.0.5)
+
+### 🩹 Fixes
+
+- **scripts:** Remove postinstall ([b4034ec](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/b4034ec))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.0.4
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.0.1...v1.0.4)
