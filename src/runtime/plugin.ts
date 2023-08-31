@@ -1,13 +1,12 @@
-import { useDayjs } from '../../node_modules/dayjs-nuxt/dist/runtime/composables/dayjs'
 import { i18nPlugin } from './computed'
-import { defineNuxtPlugin, useNuxtApp } from '#app'
+import { useNuxtApp, defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin({
-	name: 'nuxt-i18n-dayjs-plugin',
+	name: 'nuxt-dayjs-i18n-plugin',
 	// enforce: 'pre', // or 'post'
 	setup(nuxtApp) {
 		nuxtApp.hook('i18n:beforeLocaleSwitch', ({ newLocale }) => {
-			const dayjs = useDayjs()
+			const { $dayjs: dayjs } = useNuxtApp()
 			dayjs.locale(newLocale)
 		})
 	},
@@ -15,7 +14,7 @@ export default defineNuxtPlugin({
 		// You can directly register Nuxt app hooks here
 		'app:created'() {
 			const nuxtApp = useNuxtApp()
-			const dayjs = useDayjs()
+			const dayjs = nuxtApp.$dayjs
 			const { locale } = nuxtApp.$i18n
 			if (locale.value !== dayjs.locale()) {
 				dayjs.locale(locale.value)

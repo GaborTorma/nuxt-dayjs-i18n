@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import { useDayjs } from '../node_modules/dayjs-nuxt/dist/runtime/composables/dayjs'
+import { useNuxtApp } from '#app'
 import { useI18n } from '#i18n'
 
 const i18n = useI18n()
-const dayjs = useDayjs()
+const { $dayjs: dayjs } = useNuxtApp()
 
 const locale = ref(i18n.locale.value)
 
