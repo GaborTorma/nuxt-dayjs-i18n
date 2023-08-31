@@ -28,7 +28,7 @@
 		"lint": "eslint .",
 		"test": "vitest run",
 		"test:watch": "vitest watch",
-		"reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && nuxt cleanup && nuxt cleanup playground && npm install && nuxt prepare & npm run dev:prepare"
+		"reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && nuxt cleanup && nuxt cleanup playground && npm install && nuxt prepare && npm run dev:prepare"
 	},
 	"dependencies": {
 		"@nuxt/kit": "^3.6.5"
