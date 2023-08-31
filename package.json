@@ -1,58 +1,58 @@
 {
-  "name": "@gabortorma/nuxt-dayjs-i18n",
-  "version": "1.0.2",
-  "private": "false",
-  "description": "Extend dayjs-nuxt plugin with automatic i18n locale switching.",
-  "repository": {
-    "url": "git+ssh://git@github.com/GaborTorma/nuxt-dayjs-i18n.git"
-  },
-  "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
-    }
-  },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "prepack": "nuxt-module-build",
-    "dev": "nuxi dev playground --host",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-    "lint": "eslint .",
-    "test": "vitest run",
-    "test:watch": "vitest watch",
-    "postinstall": "nuxt prepare & npm run dev:prepare",
-    "reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && nuxt cleanup && nuxt cleanup playground && npm install"
-  },
-  "dependencies": {
-    "@nuxt/kit": "^3.6.5"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "^0.8.2",
-    "@nuxt/eslint-config": "^0.1.1",
-    "@nuxt/module-builder": "^0.4.0",
-    "@nuxt/schema": "3.6.5",
-    "@nuxt/test-utils": "3.6.5",
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/eslint-module": "^4.1.0",
-    "@types/node": "^18.17.3",
-    "@vue/eslint-config-prettier": "^8.0.0",
-    "changelogen": "^0.5.4",
-    "eslint": "^8.48.0",
-    "nuxt": "3.6.5",
-    "prettier": "^3.0.3",
-    "vitest": "0.33.0"
-  },
-  "peerDependencies": {
-    "@nuxtjs/i18n": "^8.0.0-rc.3",
-    "dayjs-nuxt": "^1.1.2"
-  }
+	"name": "@gabortorma/nuxt-dayjs-i18n",
+	"version": "1.0.2",
+	"private": "false",
+	"description": "Extend dayjs-nuxt plugin with automatic i18n locale switching.",
+	"repository": {
+		"url": "git+ssh://git@github.com/GaborTorma/nuxt-dayjs-i18n.git"
+	},
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/types.d.ts",
+			"import": "./dist/module.mjs",
+			"require": "./dist/module.cjs"
+		}
+	},
+	"main": "./dist/module.cjs",
+	"types": "./dist/types.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"prepack": "nuxt-module-build",
+		"dev": "nuxi dev playground --host",
+		"dev:build": "nuxi build playground",
+		"dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+		"release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish --access=public && git push --follow-tags",
+		"lint": "eslint .",
+		"test": "vitest run",
+		"test:watch": "vitest watch",
+		"postinstall": "nuxt prepare & npm run dev:prepare",
+		"reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && nuxt cleanup && nuxt cleanup playground && npm install"
+	},
+	"dependencies": {
+		"@nuxt/kit": "^3.6.5"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "^0.8.2",
+		"@nuxt/eslint-config": "^0.1.1",
+		"@nuxt/module-builder": "^0.4.0",
+		"@nuxt/schema": "3.6.5",
+		"@nuxt/test-utils": "3.6.5",
+		"@nuxtjs/eslint-config-typescript": "^12.1.0",
+		"@nuxtjs/eslint-module": "^4.1.0",
+		"@types/node": "^18.17.3",
+		"@vue/eslint-config-prettier": "^8.0.0",
+		"changelogen": "^0.5.4",
+		"eslint": "^8.48.0",
+		"nuxt": "3.6.5",
+		"prettier": "^3.0.3",
+		"vitest": "0.33.0"
+	},
+	"peerDependencies": {
+		"@nuxtjs/i18n": "^8.0.0-rc.3",
+		"dayjs-nuxt": "^1.1.2"
+	}
 }
