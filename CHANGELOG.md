@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v1.0.6
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.0.5...v1.0.6)
+
+### 🩹 Fixes
+
+- **scripts:** Extend reinstall with prepare ([fa1ea89](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/fa1ea89))
+- **script:** Reinstall ([bd46f8b](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/bd46f8b))
+- **import:** Use nuxtApp.$dayjs instad of useDayJs() ([98dbe17](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/98dbe17))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.0.5
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.0.4...v1.0.5)
