@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.0.6...v1.1.0)
+
+### 🚀 Enhancements
+
+- **locale:** Show warning message when dayjs.locale used instead of i18n.setLocale ([df85726](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/df85726))
+
+### 🩹 Fixes
+
+- **modules:** Check loaded modules ([8efebb6](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/8efebb6))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.0.6
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.0.5...v1.0.6)
