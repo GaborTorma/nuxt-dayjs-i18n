@@ -2,7 +2,7 @@ import { PluginFunc } from 'dayjs'
 import { computed } from 'vue'
 import { useNuxtApp } from '#app'
 
-export const i18nPlugin: PluginFunc = (option, dayjsClass, dayjsFactory) => {
+export const computedPlugin: PluginFunc = (option, dayjsClass, d) => {
 	dayjsClass.prototype.computedFormat = function (args: string | undefined) {
 		const { $i18n: i18n } = useNuxtApp()
 		return computed(() => {

@@ -1,4 +1,5 @@
-import { i18nPlugin } from './computed'
+import { computedPlugin } from './plugins/computed'
+import { localePlugin } from './plugins/locale'
 import { useNuxtApp, defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin({
@@ -6,10 +7,6 @@ export default defineNuxtPlugin({
 	// enforce: 'pre', // or 'post'
 	setup(nuxtApp) {
 		console.log('plugin loaded')
-		nuxtApp.hook('i18n:beforeLocaleSwitch', ({ newLocale }) => {
-			const { $dayjs: dayjs } = useNuxtApp()
-			dayjs.locale(newLocale)
-		})
 	},
 	hooks: {
 		// You can directly register Nuxt app hooks here
@@ -22,11 +19,21 @@ export default defineNuxtPlugin({
 			if (!i18n) {
 				throw new Error('@nuxtjs/i18n module not found')
 			}
+
+			dayjs.extend(computedPlugin)
+
+			const setLocale = dayjs.locale
+
 			const { locale } = nuxtApp.$i18n
 			if (locale.value !== dayjs.locale()) {
 				dayjs.locale(locale.value)
 			}
-			dayjs.extend(i18nPlugin)
+
+			dayjs.extend(localePlugin)
+
+			nuxtApp.hook('i18n:beforeLocaleSwitch', ({ newLocale }) => {
+				setLocale(newLocale)
+			})
 		},
 	},
 })

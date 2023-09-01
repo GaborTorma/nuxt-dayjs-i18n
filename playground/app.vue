@@ -26,5 +26,8 @@ const now = computed(() => i18n.locale.value && dayjs(date.value).format('L LTS'
 		</select>
 		<h3>Computed now: {{ now }}</h3>
 		<h3>Computed format now: {{ dayjs(date).computedFormat('L LTS') }}</h3>
+		<h3>Locally en format: {{ dayjs(date).locale('en').format('L LTS') }}</h3>
+		<h3>Locally en computed.format: {{ dayjs(date).locale('en').computedFormat('L LTS') }}</h3>
+		<button @click="dayjs.locale('en')">en</button>
 	</div>
 </template>
