@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.1.0...v1.2.0)
+
+### 🚀 Enhancements
+
+- **options:** Use options for computed plugin ([9d27f5c](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/9d27f5c))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.1.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.0.6...v1.1.0)
