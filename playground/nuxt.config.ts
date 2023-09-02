@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 		['@nuxt/devtools', { enabled: false }],
 		'../src/module',
 	],
-	// nuxtDayjsI18n: {},
+	dayjsI18n: { computed: true },
 	watch: [/config\/.*\.ts/],
 	devtools: { enabled: false },
 

@@ -12,6 +12,7 @@ export default defineNuxtPlugin({
 		// You can directly register Nuxt app hooks here
 		'app:created'() {
 			const nuxtApp = useNuxtApp()
+			const options = nuxtApp.$config.public.dayjsI18n
 			const { $dayjs: dayjs, $i18n: i18n } = nuxtApp
 			if (!dayjs) {
 				throw new Error('nuxt-dayjs module not found')
@@ -20,7 +21,9 @@ export default defineNuxtPlugin({
 				throw new Error('@nuxtjs/i18n module not found')
 			}
 
-			dayjs.extend(computedPlugin)
+			if (options.computed) {
+				dayjs.extend(computedPlugin)
+			}
 
 			const setLocale = dayjs.locale
 
