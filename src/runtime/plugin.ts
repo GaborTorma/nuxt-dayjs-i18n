@@ -1,28 +1,32 @@
-import { computedPlugin } from './plugins/computed'
-import { localePlugin } from './plugins/locale'
+import { PluginFunc } from 'dayjs'
 import { useNuxtApp, defineNuxtPlugin } from '#app'
+
+export const localePlugin: PluginFunc = (option, dayjsClass, d) => {
+	const locale = d.locale
+	// @ts-ignore: TS2322
+	d.locale = function (preset) {
+		if (preset) {
+			console.warn('Use i18n.setLocale insted of dayjs.locale')
+		} else {
+			return locale()
+		}
+	}
+}
 
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-plugin',
 	// enforce: 'pre', // or 'post'
-	setup(nuxtApp) {
-		console.log('plugin loaded')
-	},
+	setup(nuxtApp) {},
 	hooks: {
 		// You can directly register Nuxt app hooks here
 		'app:created'() {
 			const nuxtApp = useNuxtApp()
-			const options = nuxtApp.$config.public.dayjsI18n
 			const { $dayjs: dayjs, $i18n: i18n } = nuxtApp
 			if (!dayjs) {
 				throw new Error('nuxt-dayjs module not found')
 			}
 			if (!i18n) {
 				throw new Error('@nuxtjs/i18n module not found')
-			}
-
-			if (options.computed) {
-				dayjs.extend(computedPlugin)
 			}
 
 			const setLocale = dayjs.locale

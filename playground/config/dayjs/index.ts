@@ -3,6 +3,6 @@ import { availableLocales } from '../i18n/locales'
 
 export const dayjsConfig: Partial<ModuleOptions> = {
 	locales: availableLocales,
-	plugins: ['localizedFormat', 'duration'],
+	plugins: ['localizedFormat', 'relativeTime', 'localeData'],
 	defaultLocale: 'hu',
 }
