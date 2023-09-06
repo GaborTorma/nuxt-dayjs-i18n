@@ -8,7 +8,10 @@ export default defineNuxtConfig({
 		['@nuxt/devtools', { enabled: false }],
 		'../src/module',
 	],
-	// dayjsI18n: { computed: ['localizedFormat', 'localeData'] },
+	dayjsI18n: {
+		// computed: ['localizedFormat', 'relativeTime'],
+		debug: true,
+	},
 	watch: [/config\/.*\.ts/],
 	devtools: { enabled: false },
 

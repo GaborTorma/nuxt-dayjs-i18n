@@ -2,7 +2,7 @@ import { computed } from 'vue'
 import plugin from 'dayjs/plugin/localizedFormat'
 import { useNuxtApp } from '#app'
 
-export const formatPlugin: typeof plugin = (option, dayjsClass, d) => {
+export const localizedFormatPlugin: typeof plugin = (option, dayjsClass, d) => {
 	const format = dayjsClass.prototype.format
 	dayjsClass.prototype.format = function (template?: string): string {
 		const { $i18n: i18n } = useNuxtApp()
