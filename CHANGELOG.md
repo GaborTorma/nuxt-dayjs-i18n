@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.4.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.2.1...v1.4.0)
+
+### 🚀 Enhancements
+
+- **plugins:** Add format, localeData, relativeTime computed plugins ([ce63f22](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/ce63f22))
+- **plugins:** Dynamic load plugins based on dayjs-nuxt options ([983d63d](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/983d63d))
+
+### 🏡 Chore
+
+- **release:** V1.3.0 ([5a6c5dd](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/5a6c5dd))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.3.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.2.1...v1.3.0)
