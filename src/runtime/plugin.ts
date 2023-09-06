@@ -7,9 +7,7 @@ import { useNuxtApp, defineNuxtPlugin } from '#app'
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-plugin',
 	// enforce: 'pre', // or 'post'
-	setup(nuxtApp) {
-		console.log('plugin loaded')
-	},
+	setup(nuxtApp) {},
 	hooks: {
 		// You can directly register Nuxt app hooks here
 		'app:created'() {

@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.2.0...v1.2.1)
+
+### 🩹 Fixes
+
+- **scripts:** Prepare ([720f5ec](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/720f5ec))
+- **plugins:** Remove unused computed plugin ([62ecfee](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/62ecfee))
+
+### ❤️ Contributors
+
+- Torma Gábor
 
 ## v1.2.0
 
@@ -11,7 +23,7 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
+- Torma Gábor
 
 ## v1.1.0
 
@@ -27,7 +39,7 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
+- Torma Gábor
 
 ## v1.0.6
 
@@ -41,7 +53,7 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
+- Torma Gábor
 
 ## v1.0.5
 
@@ -53,7 +65,7 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
+- Torma Gábor
 
 ## v1.0.4
 
@@ -74,7 +86,7 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
+- Torma Gábor
 
 ## v1.0.3
 
@@ -86,7 +98,7 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
+- Torma Gábor
 
 ## v1.0.2
 
@@ -98,10 +110,9 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
+- Torma Gábor
 
 ## v1.0.1
-
 
 ### 🩹 Fixes
 
@@ -109,5 +120,4 @@
 
 ### ❤️ Contributors
 
-- Torma Gábor <tgc@telemedia.hu>
-
+- Torma Gábor
