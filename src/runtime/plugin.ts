@@ -1,4 +1,6 @@
-import { computedPlugin } from './plugins/computed'
+import { formatPlugin } from './plugins/format'
+import { relativeTimePlugin } from './plugins/relativeTime'
+import { localeDataPlugin } from './plugins/localeData'
 import { localePlugin } from './plugins/locale'
 import { useNuxtApp, defineNuxtPlugin } from '#app'
 
@@ -21,8 +23,14 @@ export default defineNuxtPlugin({
 				throw new Error('@nuxtjs/i18n module not found')
 			}
 
-			if (options.computed) {
-				dayjs.extend(computedPlugin)
+			if (options.computed.includes('localizedFormat')) {
+				dayjs.extend(formatPlugin)
+			}
+			if (options.computed.includes('relativeTime')) {
+				dayjs.extend(relativeTimePlugin)
+			}
+			if (options.computed.includes('localeData')) {
+				dayjs.extend(localeDataPlugin)
 			}
 
 			const setLocale = dayjs.locale

@@ -25,9 +25,17 @@ const now = computed(() => i18n.locale.value && dayjs(date.value).format('L LTS'
 			<option value="hu">hu</option>
 		</select>
 		<h3>Computed now: {{ now }}</h3>
-		<h3>Computed format now: {{ dayjs(date).computedFormat('L LTS') }}</h3>
 		<h3>Locally en format: {{ dayjs(date).locale('en').format('L LTS') }}</h3>
-		<h3>Locally en computed.format: {{ dayjs(date).locale('en').computedFormat('L LTS') }}</h3>
+		<p>Format: {{ dayjs().format('L LTS') }}</p>
+		<p>Computed: {{ now }}</p>
+		<p>ComputedFormat: {{ dayjs(new Date()).format('L LTS') }}</p>
+		<p>fromNow: {{ dayjs().fromNow() }}</p>
+		<p>fromNow: {{ dayjs().from(new Date('2023')) }}</p>
+		<p>toNow: {{ dayjs().toNow() }}</p>
+		<p>monthsShort: {{ dayjs.monthsShort() }}</p>
+		<p>weekdays: {{ dayjs.weekdays() }}</p>
+		<p>longDateFormat: {{ dayjs().localeData().longDateFormat('L') }}</p>
+		<p>localeData().weekdays: {{ dayjs.localeData().weekdays() }}</p>
 		<button @click="dayjs.locale('en')">en</button>
 	</div>
 </template>
