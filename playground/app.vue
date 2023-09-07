@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useNuxtApp } from '#app'
 import { useI18n } from '#i18n'
 
@@ -10,45 +10,48 @@ const locale = ref(i18n.locale.value)
 
 watch(() => locale.value, i18n.setLocale)
 
-const date = ref(new Date('2023-02-11 14:22'))
-
-const now = computed(() => i18n.locale.value && dayjs(date.value).format('L LTS'))
-
-const funcs = ['months', 'monthsShort', 'weekdays', 'weekdaysShort', 'weekdaysMin'] as const
+const date = ref(new Date('2023-08-11 14:22'))
 </script>
 
 <template>
 	<div>
 		<h2>
-			i18n welcome message: <span data-test="welcome">{{ $t('welcome') }}</span>
+			i18n welcome message: <span data-test="welcome"> {{ $t('welcome') }} </span>
 		</h2>
+		<h3>Select language:</h3>
 		<select v-model="locale">
 			<option value="en">en</option>
 			<option value="hu">hu</option>
 		</select>
-		<h3>Format: {{ dayjs(date).format('L LTS') }}</h3>
-		<h3>Computed now: {{ now }}</h3>
-		<h3>Locally en format: {{ dayjs(date).locale('en').format('L LTS') }}</h3>
-		<p>Format: {{ dayjs().format('L LTS') }}</p>
-		<p>Computed: {{ now }}</p>
-		<p>ComputedFormat: {{ dayjs(new Date()).format('L LTS') }}</p>
-		<p>fromNow: {{ dayjs().fromNow() }}</p>
-		<p>fromNow: {{ dayjs().from(new Date('2023')) }}</p>
-		<p>toNow: {{ dayjs().toNow() }}</p>
-		<p>monthsShort: {{ dayjs.monthsShort() }}</p>
-		<p>weekdays: {{ dayjs.weekdays() }}</p>
-		<p>longDateFormat: {{ dayjs().localeData().longDateFormat('L') }}</p>
-		<p>localeData().weekdays: {{ dayjs.localeData().weekdays() }}</p>
-		<button @click="dayjs.locale('en')">en</button>
-		<h4>Locale Data</h4>
-		<template v-for="(func, index) in funcs" :key="index">
-			<p>dayjs.{{ func }}(): {{ dayjs[func]() }}</p>
-		</template>
-		<p>{{ dayjs.localeData().firstDayOfWeek() }}</p>
+		<p>Base datetime: {{ date }}</p>
+		<div>Computed format:</div>
+		<div class="bold" data-test="format">{{ dayjs(date).format('L LTS') }}</div>
+		<code>dayjs(date).format('L LTS')</code>
+		<div style="margin-top: 10px">Locally en format:</div>
+		<div class="bold" data-test="locally-format">
+			{{ dayjs(date).locale('en').format('L LTS') }}
+		</div>
+		<code>dayjs(date).locale('en').format('L LTS')</code>
+		<div style="margin-top: 10px">Computed realitve time from 2023-01-01:</div>
+		<div class="bold" data-test="relative-time">{{ dayjs(date).from('2023-01-01') }}</div>
+		<code>dayjs(date).from('2023-01-01')</code>
+		<div style="margin-top: 10px">Computed locale data (weekdays):</div>
+		<div class="bold" data-test="weekdays">{{ dayjs.localeData().weekdays() }}</div>
+		<code>dayjs.localeData().weekdays()</code>
+		<div style="margin-top: 10px">Computed format by providet function $df:</div>
+		<div class="bold" data-test="dt">{{ $df(date, 'LLLL') }}</div>
+		<code>$df(date, 'LLLL')</code>
 
-		<p>{{ dayjs().from(dayjs('2023-05-01')) }}</p>
-		<p>{{ dayjs().fromNow() }}</p>
-		<p>{{ dayjs().to(dayjs('2023-09-16')) }}</p>
-		<p>{{ dayjs().toNow() }}</p>
+		<div style="margin-top: 10px">
+			Button for set dayjs.locale. It will nothing happen, only showing the following message in
+			console: <i>Use i18n.setLocale instead of dayjs.locale</i>
+		</div>
+		<button @click="dayjs.locale('en')">en</button>
 	</div>
 </template>
+
+<style>
+.bold {
+	font-weight: bold;
+}
+</style>
