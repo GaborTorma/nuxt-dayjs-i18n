@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.5.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.4.0...v1.5.0)
+
+### 🚀 Enhancements
+
+- **plugins:** Provide format function $df ([dfccc4e](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/dfccc4e))
+
+### 🩹 Fixes
+
+- **test:** Use en locale for default ([448cc7a](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/448cc7a))
+- **playground:** Refactor test page ([b8a1555](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/b8a1555))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.4.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.2.1...v1.4.0)
