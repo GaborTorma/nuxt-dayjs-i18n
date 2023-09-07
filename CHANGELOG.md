@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.5.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.5.0...v1.5.1)
+
+### 🩹 Fixes
+
+- **docs:** Module name in readme ([06a1b78](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/06a1b78))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.5.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.4.0...v1.5.0)
