@@ -33,7 +33,7 @@ npm install --save-dev @gabortorma/nuxt-dayjs-i18n
 
 ```js
 export default defineNuxtConfig({
-	modules: ['@nuxtjs/i18n', 'nuxt-dayjs', 'nuxt-dayjs-i18n'],
+	modules: ['@nuxtjs/i18n', 'nuxt-dayjs', '@gabortorma/nuxt-dayjs-i18n'],
 })
 ```
 
