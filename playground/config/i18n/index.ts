@@ -1,14 +1,11 @@
 import type { NuxtI18nOptions } from '@nuxtjs/i18n/dist/module'
-import { fallbackLocale, defaultLocale, locales } from './locales'
+import { defaultLocale, locales } from './locales'
 
 export const i18nConfig: Partial<NuxtI18nOptions> = {
 	locales,
 	lazy: true,
 	strategy: 'no_prefix',
-	detectBrowserLanguage: {
-		fallbackLocale,
-		useCookie: true,
-	},
+	detectBrowserLanguage: false,
 	langDir: 'locales',
 	defaultLocale,
 	debug: false,

@@ -1,21 +1,21 @@
 import { LocaleObject } from '#i18n'
 
-export const fallbackLocale = 'hu'
+export const fallbackLocale = 'en'
 
-export const defaultLocale = 'hu'
+export const defaultLocale = 'en'
 
 export const locales: LocaleObject[] = [
-	{
-		code: 'hu',
-		iso: 'hu-HU',
-		file: 'hu.ts',
-		name: 'Magyar',
-	},
 	{
 		code: 'en',
 		iso: 'en-US',
 		file: 'en.ts',
 		name: 'English',
+	},
+	{
+		code: 'hu',
+		iso: 'hu-HU',
+		file: 'hu.ts',
+		name: 'Magyar',
 	},
 ]
 
