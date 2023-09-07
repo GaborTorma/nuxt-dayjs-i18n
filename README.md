@@ -1,13 +1,9 @@
 # Nuxt Dayjs i18n
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
-
-Extend [dayjs-nuxt](https://github.com/fumeapp/dayjs) plugin with automatic i18n locale switching.
+Extend [dayjs-nuxt](https://github.com/fumeapp/dayjs) plugin with automatic i18n locale switching, computed plugins and provide format function.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
+- [👾 &nbsp;Playground](/https://stackblitz.com/edit/nuxt-dayjs-i18n)
 
 ## Instructions
 
@@ -37,11 +33,38 @@ npm install --save-dev @gabortorma/nuxt-dayjs-i18n
 
 ```js
 export default defineNuxtConfig({
-	modules: ['nuxt-dayjs-i18n'],
+	modules: ['@nuxtjs/i18n', 'nuxt-dayjs', 'nuxt-dayjs-i18n'],
 })
 ```
 
-That's it! You can now use Nuxt Dayjs i18n in your Nuxt app.
+## Configuration
+
+You can specify the plugins, set ato provide format function and debug
+
+```ts
+export default defineNuxtConfig({
+	...
+	dayjsI18n: {
+		computedPlugins: true, // you can specify in array: ['localiztedFormat', 'relativeTime', 'localeData']
+		provideFormat: true, // provide $df for Vue
+		debug: false,
+	}
+	...
+})
+```
+
+## Basic Usage
+
+You can use the provided format function anywhere.
+
+```vue
+<template>
+	<div>
+		{{ $df('2023-09-07 15:00:02', 'L LTS') }}
+		// en-US output: 09/07/2023 3:00:02 PM
+	</div>
+</template>
+```
 
 ## Development
 
