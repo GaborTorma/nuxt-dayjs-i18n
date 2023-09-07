@@ -5,7 +5,8 @@ type TComputedPlugin = (typeof computedPlugins)[number]
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
-	computed?: true | Array<TComputedPlugin>
+	computedPlugins?: true | Array<TComputedPlugin>
+	provideFormat?: boolean
 	debug?: boolean
 }
 
@@ -35,7 +36,8 @@ export default defineNuxtModule<ModuleOptions>({
 	},
 	// Default configuration options of the Nuxt module
 	defaults: {
-		computed: true,
+		computedPlugins: true,
+		provideFormat: true,
 		debug: false,
 	},
 	setup(options, nuxt) {
@@ -45,11 +47,16 @@ export default defineNuxtModule<ModuleOptions>({
 		const resolver = createResolver(import.meta.url)
 		addPlugin(resolver.resolve('./runtime/plugin'))
 
+		if (options.provideFormat) {
+			addPlugin(resolver.resolve('./runtime/plugins/provideFormat'))
+			debug(`provideFormat plugin added`)
+		}
+
 		const dayjsPluginOptions = getDayjsPluginOptions(nuxt.options)
 		for (const plugin of computedPlugins) {
-			const allComputedPluginInclued = options.computed === true
+			const allComputedPluginInclued = options.computedPlugins === true
 			const thisComputedPluginInclued =
-				Array.isArray(options.computed) && options.computed.includes(plugin)
+				Array.isArray(options.computedPlugins) && options.computedPlugins.includes(plugin)
 			const computedPluginInclued = allComputedPluginInclued || thisComputedPluginInclued
 			const dayjsPluginIncluded = dayjsPluginOptions.includes(plugin)
 
