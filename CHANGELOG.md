@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.7.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.6.1...v1.7.0)
+
+### 🚀 Enhancements
+
+- **deps:** Upgrade all deps. ([47c7366](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/47c7366))
+
+### ❤️ Contributors
+
+- Torma Gábor <tgc@telemedia.hu>
+
 ## v1.6.1
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.6.0...v1.6.1)
