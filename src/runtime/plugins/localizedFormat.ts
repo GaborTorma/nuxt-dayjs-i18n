@@ -1,5 +1,5 @@
-import { localizedFormatPlugin } from './dayjs/localizedFormat'
 import { useNuxtApp, defineNuxtPlugin } from '#app'
+import { localizedFormatPlugin } from './dayjs/localizedFormat'
 
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-localizedFormat-plugin',

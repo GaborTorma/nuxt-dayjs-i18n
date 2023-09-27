@@ -1,5 +1,5 @@
-import { localePlugin } from './plugins/dayjs/locale'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
+import { localePlugin } from './plugins/dayjs/locale'
 
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-plugin',
