@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.8.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.7.0...v1.8.0)
+
+### 🚀 Enhancements
+
+- **deps:** Upgrade deps ([0314861](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/0314861))
+
+### 🩹 Fixes
+
+- **plugins:** Change import order ([b0d8292](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/b0d8292))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v1.7.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.6.1...v1.7.0)
