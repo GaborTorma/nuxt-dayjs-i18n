@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.9.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.9.0...v1.9.1)
+
+### 🩹 Fixes
+
+- **build:** Specify the build command explicitly ([7706306](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/7706306))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v1.9.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.8.0...v1.9.0)
