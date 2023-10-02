@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useNuxtApp } from '#app'
 import { useI18n } from '#i18n'
+import { useDayjs } from '#imports'
 
 const i18n = useI18n()
-const { $dayjs: dayjs } = useNuxtApp()
+const dayjs = useDayjs()
 
 const locale = ref(i18n.locale.value)
 

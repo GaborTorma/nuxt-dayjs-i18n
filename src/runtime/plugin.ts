@@ -1,12 +1,14 @@
 import { defineNuxtPlugin, useNuxtApp } from '#app'
 import { localePlugin } from './plugins/dayjs/locale'
+import { useDayjs } from '#imports'
 
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-plugin',
 	hooks: {
 		'app:created'() {
 			const nuxtApp = useNuxtApp()
-			const { $dayjs: dayjs, $i18n: i18n } = nuxtApp
+			const { $i18n: i18n } = nuxtApp
+			const dayjs = useDayjs()
 			if (!dayjs) {
 				throw new Error('nuxt-dayjs module not found')
 			}
