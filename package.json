@@ -53,6 +53,6 @@
   },
   "peerDependencies": {
     "@nuxtjs/i18n": "^8.0.0-rc.3",
-    "dayjs-nuxt": "^1.2.2"
+    "dayjs-nuxt": "^1.2.7"
   }
 }
