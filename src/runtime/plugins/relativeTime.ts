@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from '#app'
+import { useDayjs } from '#dayjs'
 import { relativeTimePlugin } from './dayjs/relativeTime'
-import { useDayjs } from '#imports'
 
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-relativeTime-plugin',

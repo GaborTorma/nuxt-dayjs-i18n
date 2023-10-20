@@ -1,6 +1,9 @@
+import { locale } from 'dayjs'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
 import { localePlugin } from './plugins/dayjs/locale'
 import { useDayjs } from '#imports'
+
+let setLocale: typeof locale | undefined
 
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-plugin',
@@ -8,26 +11,28 @@ export default defineNuxtPlugin({
 		'app:created'() {
 			const nuxtApp = useNuxtApp()
 			const { $i18n: i18n } = nuxtApp
+			if (!i18n) {
+				throw new Error('@nuxtjs/i18n module not found')
+			}
 			const dayjs = useDayjs()
 			if (!dayjs) {
 				throw new Error('nuxt-dayjs module not found')
 			}
-			if (!i18n) {
-				throw new Error('@nuxtjs/i18n module not found')
+
+			if (!setLocale) {
+				setLocale = dayjs.locale
 			}
 
-			const setLocale = dayjs.locale
-
-			const { locale } = nuxtApp.$i18n
-			if (locale.value !== dayjs.locale()) {
-				dayjs.locale(locale.value)
+			if (i18n.locale.value !== dayjs.locale()) {
+				setLocale(i18n.locale.value)
 			}
 
 			dayjs.extend(localePlugin)
-
-			nuxtApp.hook('i18n:beforeLocaleSwitch', ({ newLocale }) => {
+		},
+		'i18n:beforeLocaleSwitch'({ newLocale }) {
+			if (setLocale) {
 				setLocale(newLocale)
-			})
+			}
 		},
 	},
 })

@@ -3,10 +3,10 @@ import { dayjsConfig } from './config/dayjs'
 
 export default defineNuxtConfig({
 	modules: [
+		'../src/module',
 		['dayjs-nuxt', dayjsConfig],
 		['@nuxtjs/i18n', i18nConfig],
 		['@nuxt/devtools', { enabled: false }],
-		'../src/module',
 	],
 	dayjsI18n: {
 		// computed: ['localizedFormat', 'relativeTime'],

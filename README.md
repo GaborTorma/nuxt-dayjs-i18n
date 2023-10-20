@@ -33,7 +33,11 @@ npm install --save-dev @gabortorma/nuxt-dayjs-i18n
 
 ```js
 export default defineNuxtConfig({
-	modules: ['@nuxtjs/i18n', 'nuxt-dayjs', '@gabortorma/nuxt-dayjs-i18n'],
+	modules: [
+		'@gabortorma/nuxt-dayjs-i18n',
+		'@nuxtjs/i18n',
+		'nuxt-dayjs',
+	],
 })
 ```
 
@@ -44,6 +48,29 @@ You can specify the plugins, set ato provide format function and debug
 ```ts
 export default defineNuxtConfig({
 	...
+	i18n: {
+		locales: [{
+				code: 'en-gb',
+				iso: 'en-GB',
+				file: 'en-gb.ts',
+				name: 'English',
+			},
+			{
+				// use same code with dayjs locale file names:
+				// https://github.com/iamkun/dayjs/tree/dev/src/locale
+				code: 'hu',
+				iso: 'hu-HU',
+				file: 'hu.ts',
+				name: 'Magyar',
+		}],
+		...
+	},
+	dayjs : {
+		locales: ['en-gb', 'hu'],
+		// defaultLocale: 'en'
+		// !! don't use defaultLocale, it comes from i18n
+		...
+	},
 	dayjsI18n: {
 		computedPlugins: true, // you can specify in array: ['localiztedFormat', 'relativeTime', 'localeData']
 		provideFormat: true, // provide $df for Vue
@@ -53,7 +80,11 @@ export default defineNuxtConfig({
 })
 ```
 
-## Basic Usage
+## Basic usage
+
+You can check [dayjs-nuxt](https://github.com/fumeapp/dayjs#basic-usage)
+
+## Provided format
 
 You can use the provided format function anywhere.
 

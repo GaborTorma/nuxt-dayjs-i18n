@@ -1,6 +1,6 @@
 import type { Dayjs } from 'dayjs'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
-import { useDayjs } from '#imports'
+import { useDayjs } from '#dayjs'
 
 export default defineNuxtPlugin({
 	name: 'nuxt-dayjs-i18n-provide-format-plugin',

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useI18n } from '#i18n'
-import { useDayjs } from '#imports'
+import { useDayjs } from '#dayjs'
 
 const i18n = useI18n()
 const dayjs = useDayjs()
@@ -20,20 +20,19 @@ const date = ref(new Date('2023-08-11 14:22'))
 		</h2>
 		<h3>Select language:</h3>
 		<select v-model="locale">
-			<option value="en">en</option>
+			<option value="en-gb">en-gb</option>
 			<option value="hu">hu</option>
 		</select>
-		<p>Base datetime: {{ date }}</p>
 		<div>Computed format:</div>
 		<div class="bold" data-test="format">{{ dayjs(date).format('L LTS') }}</div>
 		<code>dayjs(date).format('L LTS')</code>
 		<div style="margin-top: 10px">Locally en format:</div>
 		<div class="bold" data-test="locally-format">
-			{{ dayjs(date).locale('en').format('L LTS') }}
+			{{ $dayjs(date).locale('en-gb').format('L LTS') }}
 		</div>
 		<code>dayjs(date).locale('en').format('L LTS')</code>
-		<div style="margin-top: 10px">Computed realitve time from 2023-01-01:</div>
-		<div class="bold" data-test="relative-time">{{ dayjs(date).from('2023-01-01') }}</div>
+		<div style="margin-top: 10px">Computed relative time from 2023-01-01:</div>
+		<div class="bold" data-test="relative-time">{{ $dayjs(date).from('2023-01-01') }}</div>
 		<code>dayjs(date).from('2023-01-01')</code>
 		<div style="margin-top: 10px">Computed locale data (weekdays):</div>
 		<div class="bold" data-test="weekdays">{{ dayjs.localeData().weekdays() }}</div>

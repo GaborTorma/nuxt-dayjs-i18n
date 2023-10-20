@@ -1,14 +1,14 @@
 import { LocaleObject } from '#i18n'
 
-export const fallbackLocale = 'en'
+export const fallbackLocale = 'en-gb'
 
-export const defaultLocale = 'en'
+export const defaultLocale = 'en-gb'
 
 export const locales: LocaleObject[] = [
 	{
-		code: 'en',
-		iso: 'en-US',
-		file: 'en.ts',
+		code: 'en-gb',
+		iso: 'en-GB',
+		file: 'en-gb.ts',
 		name: 'English',
 	},
 	{

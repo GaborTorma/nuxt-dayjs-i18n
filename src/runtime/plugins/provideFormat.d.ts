@@ -39,3 +39,6 @@ declare module 'vue' {
 		$df(date: string | number | Date | Dayjs, template: string): string
 	}
 }
+
+declare const _default: any
+export default _default

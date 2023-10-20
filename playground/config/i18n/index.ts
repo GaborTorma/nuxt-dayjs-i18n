@@ -5,7 +5,6 @@ export const i18nConfig: Partial<NuxtI18nOptions> = {
 	locales,
 	lazy: true,
 	strategy: 'no_prefix',
-	detectBrowserLanguage: false,
 	langDir: 'locales',
 	defaultLocale,
 	debug: false,

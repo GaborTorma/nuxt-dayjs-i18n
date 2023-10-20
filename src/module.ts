@@ -54,13 +54,13 @@ export default defineNuxtModule<ModuleOptions>({
 
 		const dayjsPluginOptions = getDayjsPluginOptions(nuxt.options)
 		for (const plugin of computedPlugins) {
-			const allComputedPluginInclued = options.computedPlugins === true
-			const thisComputedPluginInclued =
+			const allComputedPluginIncluded = options.computedPlugins === true
+			const thisComputedPluginIncluded =
 				Array.isArray(options.computedPlugins) && options.computedPlugins.includes(plugin)
-			const computedPluginInclued = allComputedPluginInclued || thisComputedPluginInclued
+			const computedPluginIncluded = allComputedPluginIncluded || thisComputedPluginIncluded
 			const dayjsPluginIncluded = dayjsPluginOptions.includes(plugin)
 
-			if (computedPluginInclued && dayjsPluginIncluded) {
+			if (computedPluginIncluded && dayjsPluginIncluded) {
 				addPlugin(resolver.resolve(`./runtime/plugins/${plugin}`))
 				debug(`${plugin} computed dayjs plugin added`)
 			}
