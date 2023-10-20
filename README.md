@@ -3,7 +3,7 @@
 Extend [dayjs-nuxt](https://github.com/fumeapp/dayjs) plugin with automatic i18n locale switching, computed plugins and provide format function.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-- [👾 &nbsp;Playground](/https://stackblitz.com/edit/nuxt-dayjs-i18n)
+- [👾 &nbsp;Playground](https://stackblitz.com/edit/nuxt-dayjs-i18n)
 
 ## Instructions
 
