@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.0.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v2.0.0...v2.0.1)
+
+### 📖 Documentation
+
+- Fix playground link ([8e9c83d](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/8e9c83d))
+
+### ❤️ Contributors
+
+- Reslear <reslear@gmail.com>
+
 ## v2.0.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.9.2...v2.0.0)
