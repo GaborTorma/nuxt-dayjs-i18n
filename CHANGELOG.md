@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.0.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.9.2...v2.0.0)
+
+### 🏡 Chore
+
+- ⚠️  Upgrade deps. ([18c4d21](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/18c4d21))
+- ⚠️  Refactored based on dayjs-nuxt 2.1.9 ([313ec0a](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/313ec0a))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Upgrade deps. ([18c4d21](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/18c4d21))
+- ⚠️  Refactored based on dayjs-nuxt 2.1.9 ([313ec0a](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/313ec0a))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v1.9.2
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v1.9.1...v1.9.2)
