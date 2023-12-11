@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.0.2
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v2.0.1...v2.0.2)
+
+### 🏡 Chore
+
+- Upgrade deps. ([aa98ebf](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/aa98ebf))
+
+### ✅ Tests
+
+- Add new test for playground ([301fd31](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/301fd31))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v2.0.1
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v2.0.0...v2.0.1)
