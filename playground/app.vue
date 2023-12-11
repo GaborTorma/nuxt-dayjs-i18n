@@ -46,6 +46,7 @@ const date = ref(new Date('2023-08-11 14:22'))
 			console: <i>Use i18n.setLocale instead of dayjs.locale</i>
 		</div>
 		<button @click="dayjs.locale('en')">en</button>
+		<p>{{ $df('2023-09-07 15:00:02', 'L LTS') }}</p>
 	</div>
 </template>
 
