@@ -1,4 +1,4 @@
-import { LocaleObject } from '#i18n'
+import type { LocaleObject } from '@nuxtjs/i18n'
 
 export const fallbackLocale = 'en-gb'
 

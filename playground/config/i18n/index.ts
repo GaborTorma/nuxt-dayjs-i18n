@@ -1,4 +1,4 @@
-import type { NuxtI18nOptions } from '@nuxtjs/i18n/dist/module'
+import type { NuxtI18nOptions } from '@nuxtjs/i18n'
 import { defaultLocale, locales } from './locales'
 
 export const i18nConfig: Partial<NuxtI18nOptions> = {

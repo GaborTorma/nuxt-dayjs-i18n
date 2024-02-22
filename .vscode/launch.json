@@ -8,7 +8,7 @@
 			"type": "chrome",
 			"request": "launch",
 			"name": "client: chrome",
-			"url": "http://172.16.1.97:3000",
+			"url": "http://localhost:3000",
 			"webRoot": "${workspaceFolder}",
 			"userDataDir": "C:\\ProgramData\\pwa-chrome",
 			"runtimeArgs": ["--profile-directory=CCPro", "--remote-debugging-port=9222"]
