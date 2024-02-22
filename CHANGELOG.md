@@ -1,5 +1,21 @@
 # Changelog
 
+## v3.0.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v2.0.2...v3.0.0)
+
+### 🏡 Chore
+
+- ⚠️  Upgrade all deps. with pnpm ([4eeb837](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/4eeb837))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Upgrade all deps. with pnpm ([4eeb837](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/4eeb837))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v2.0.2
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v2.0.1...v2.0.2)
