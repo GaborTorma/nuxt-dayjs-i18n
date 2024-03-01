@@ -9,9 +9,10 @@ export default defineNuxtPlugin({
 			const nuxtApp = useNuxtApp()
 			const dayjs = useDayjs()
 
-			nuxtApp.provide('df', (date: string | number | Date | Dayjs, template: string): string =>
-				dayjs(date).format(template)
-			)
+			nuxtApp.provide('df', (date: string | number | Date | Dayjs, template: string): string => {
+				const { $i18n: i18n } = nuxtApp
+				return dayjs(date).locale(i18n.locale.value).format(template)
+			})
 		},
 	},
 })
