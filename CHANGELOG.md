@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.0.2
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.1...v4.0.2)
+
+### 🏡 Chore
+
+- Upgrade deps. ([831eb25](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/831eb25))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v4.0.1
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.0...v4.0.1)
