@@ -133,7 +133,7 @@ dayjs.localeData().xxxx() // lost reactivity, do not use!
 dayjs.computedLocaleData().xxxx() // still reactive
 ```
 
-You can check more examples in [playground](https://stackblitz.com/edit/nuxt-dayjs-i18n)
+You can check more examples in [Playground](https://stackblitz.com/edit/nuxt-dayjs-i18n)
 
 ## Provided format
 
