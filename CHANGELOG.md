@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.0.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.0...v4.0.1)
+
+### 🩹 Fixes
+
+- $df template plugin ([941b3d9](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/941b3d9))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v4.0.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v3.0.1...v4.0.0)

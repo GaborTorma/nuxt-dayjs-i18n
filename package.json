@@ -1,6 +1,6 @@
 {
   "name": "@gabortorma/nuxt-dayjs-i18n",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Extend dayjs-nuxt plugin with automatic i18n locale switching.",
   "repository": {
     "url": "git+ssh://git@github.com/GaborTorma/nuxt-dayjs-i18n.git"
