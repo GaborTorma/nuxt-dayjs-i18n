@@ -1,5 +1,21 @@
 # Changelog
 
+## v4.0.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v3.0.1...v4.0.0)
+
+### 🏡 Chore
+
+- ⚠️  Fix version ([e87e435](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/e87e435))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Fix version ([e87e435](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/e87e435))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v3.0.1
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v3.0.0...v3.0.1)
