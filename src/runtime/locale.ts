@@ -1,6 +1,6 @@
 import { locale } from 'dayjs'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
-import { localePlugin } from './plugins/dayjs/locale'
+import { localePlugin } from './dayjs/locale'
 import { useDayjs } from '#imports'
 
 let setLocale: typeof locale | undefined
@@ -29,6 +29,7 @@ export default defineNuxtPlugin({
 
 			dayjs.extend(localePlugin)
 		},
+
 		'i18n:beforeLocaleSwitch'({ newLocale }) {
 			if (setLocale) {
 				setLocale(newLocale)

@@ -33,11 +33,7 @@ npm install --save-dev @gabortorma/nuxt-dayjs-i18n
 
 ```js
 export default defineNuxtConfig({
-	modules: [
-		'@gabortorma/nuxt-dayjs-i18n',
-		'@nuxtjs/i18n',
-		'nuxt-dayjs',
-	],
+	modules: ['@gabortorma/nuxt-dayjs-i18n', '@nuxtjs/i18n', 'nuxt-dayjs'],
 })
 ```
 
@@ -83,6 +79,61 @@ export default defineNuxtConfig({
 ## Basic usage
 
 You can check [dayjs-nuxt](https://github.com/fumeapp/dayjs#basic-usage)
+
+## Usage in computed value
+
+Original dayjs function lost reactivity in computed value and does not change when the locale is changed. These three computed plugin provides a solution for this.
+
+### Localized format
+
+```ts
+const formatInComputed = computed(() => dayjs(new Date()).format('L LTS')) // lost reactivity, do not use!
+const computedFormat = dayjs(new Date()).computedFormat('L LTS') // still reactive
+const formatedWelcome = computed(() => `Welcome at ${dayjs().computedFormat('L LTS')}`) // still reactive
+```
+
+### Relative time
+
+#### computedFrom
+
+```ts
+const fromInComputed = computed(() => dayjs(new Date()).from('2023-01-01')) // lost reactivity, do not use!
+const computedFrom = dayjs(new Date()).computedFrom('2023-01-01') // still reactive
+```
+
+#### computedFromNow
+
+```ts
+const fromNowInComputed = computed(() => dayjs(new Date()).fromNow()) // lost reactivity, do not use!
+const computedFromNow = dayjs(new Date()).computedFromNow() // still reactive
+```
+
+#### computedTo
+
+```ts
+const toInComputed = computed(() => dayjs(new Date()).to('2023-01-01')) // lost reactivity, do not use!
+const computedTo = dayjs(new Date()).computedTo('2023-01-01') // still reactive
+```
+
+#### computedToNow
+
+```ts
+const toNowInComputed = computed(() => dayjs(new Date()).toNow()) // lost reactivity, do not use!
+const computedToNow = dayjs(new Date()).computedToNow() // still reactive
+```
+
+### Locale data
+
+```ts
+const monthsInComputed = computed(() => dayjs.localeData().months()) // lost reactivity, do not use!
+const computedMonths = dayjs.computedLocaleData().months() // still reactive
+const nameOfFirstMonth = computed(() => dayjs.computedLocaleData().months()[0]) // still reactive
+
+dayjs.localeData().xxxx() // lost reactivity, do not use!
+dayjs.computedLocaleData().xxxx() // still reactive
+```
+
+You can check more examples in [playground](https://stackblitz.com/edit/nuxt-dayjs-i18n)
 
 ## Provided format
 

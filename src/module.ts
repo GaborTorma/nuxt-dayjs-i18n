@@ -45,10 +45,10 @@ export default defineNuxtModule<ModuleOptions>({
 		debug('setup started')
 
 		const resolver = createResolver(import.meta.url)
-		addPlugin(resolver.resolve('./runtime/plugin'))
+		addPlugin(resolver.resolve('./runtime/locale'))
 
 		if (options.provideFormat) {
-			addPlugin(resolver.resolve('./runtime/plugins/provideFormat'))
+			addPlugin(resolver.resolve('./runtime/provideFormat'))
 			debug(`provideFormat plugin added`)
 		}
 
@@ -61,7 +61,7 @@ export default defineNuxtModule<ModuleOptions>({
 			const dayjsPluginIncluded = dayjsPluginOptions.includes(plugin)
 
 			if (computedPluginIncluded && dayjsPluginIncluded) {
-				addPlugin(resolver.resolve(`./runtime/plugins/${plugin}`))
+				addPlugin(resolver.resolve(`./runtime/${plugin}`))
 				debug(`${plugin} computed dayjs plugin added`)
 			}
 		}
