@@ -1,5 +1,18 @@
 # Changelog
 
+## v3.0.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v3.0.0...v3.0.1)
+
+### 🏡 Chore
+
+- Upgrade deps. ([0b22321](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/0b22321))
+- **!:** Refactor full coputed plugin system ([2b6e4e2](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/2b6e4e2))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v3.0.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v2.0.2...v3.0.0)
