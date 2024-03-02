@@ -52,6 +52,7 @@ export default defineNuxtModule<ModuleOptions>({
 			debug(`provideFormat plugin added`)
 		}
 
+		const plugins: string[] = []
 		const dayjsPluginOptions = getDayjsPluginOptions(nuxt.options)
 		for (const plugin of computedPlugins) {
 			const allComputedPluginIncluded = options.computedPlugins === true
@@ -61,9 +62,20 @@ export default defineNuxtModule<ModuleOptions>({
 			const dayjsPluginIncluded = dayjsPluginOptions.includes(plugin)
 
 			if (computedPluginIncluded && dayjsPluginIncluded) {
-				addPlugin(resolver.resolve(`./runtime/${plugin}`))
-				debug(`${plugin} computed dayjs plugin added`)
+				plugins.push(plugin)
 			}
 		}
+
+		plugins.forEach((plugin) => {
+			addPlugin(resolver.resolve(`./runtime/${plugin}`))
+			debug(`${plugin} computed dayjs plugin added`)
+		})
+
+		nuxt.hook('prepare:types', ({ references }) => {
+			plugins.forEach((plugin) => {
+				references.push({ types: `@gabortorma/nuxt-dayjs-i18n/runtime/dayjs/${plugin}.d.ts` })
+				debug(`${plugin} computed dayjs plugin types added`)
+			})
+		})
 	},
 })
