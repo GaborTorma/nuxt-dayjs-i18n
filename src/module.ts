@@ -70,12 +70,5 @@ export default defineNuxtModule<ModuleOptions>({
 			addPlugin(resolver.resolve(`./runtime/${plugin}`))
 			debug(`${plugin} computed dayjs plugin added`)
 		})
-
-		/* nuxt.hook('prepare:types', ({ references }) => {
-			plugins.forEach((plugin) => {
-				references.push({ types: `@gabortorma/nuxt-dayjs-i18n/dayjs/${plugin}` })
-				debug(`${plugin} computed dayjs plugin types added`)
-			})
-		}) */
 	},
 })

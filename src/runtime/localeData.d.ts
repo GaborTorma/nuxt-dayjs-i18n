@@ -7,5 +7,7 @@ declare module 'dayjs' {
   }
 }
 
+export const localeDataPlugin: typeof plugin
+
 declare const _default: any
 export default _default
