@@ -1,5 +1,18 @@
 # Changelog
 
+## v4.0.4
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.3...v4.0.4)
+
+### 🩹 Fixes
+
+- Types ([fbce18f](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/fbce18f))
+- Remove types prepare ([ff5d7b9](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/ff5d7b9))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v4.0.3
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.2...v4.0.3)
