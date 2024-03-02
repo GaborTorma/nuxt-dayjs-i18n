@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.0.5
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.4...v4.0.5)
+
+### 🩹 Fixes
+
+- Merge nuxt plugins with dayjs plugins ([43a40e4](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/43a40e4))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v4.0.4
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.3...v4.0.4)
