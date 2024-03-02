@@ -1,4 +1,3 @@
-import plugin from 'dayjs/plugin/relativeTime'
 import type { ComputedRef } from 'vue'
 
 declare module 'dayjs' {
@@ -9,8 +8,6 @@ declare module 'dayjs' {
 		computedToNow(withoutSuffix?: boolean): ComputedRef<string>
 	}
 }
-
-export const relativeTimePlugin: typeof plugin
 
 declare const _default: any
 export default _default
