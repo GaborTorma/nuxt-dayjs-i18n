@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.0.3
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.2...v4.0.3)
+
+### 🩹 Fixes
+
+- Type prepare ([be19dea](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/be19dea))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v4.0.2
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.1...v4.0.2)
