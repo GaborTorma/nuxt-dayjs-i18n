@@ -1,5 +1,21 @@
 # Changelog
 
+## v5.0.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.5...v5.0.0)
+
+### 🏡 Chore
+
+- ⚠️  Original dayjs function reactive again when computed plugins enabled ([1ee52d5](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/1ee52d5))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Original dayjs function reactive again when computed plugins enabled ([1ee52d5](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/1ee52d5))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v4.0.5
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.4...v4.0.5)
