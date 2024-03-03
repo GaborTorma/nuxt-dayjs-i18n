@@ -16,17 +16,13 @@ const dayjs = useDayjs()
 
 const date = ref(new Date('2023-08-11 14:22'))
 
-const formatInComputed = computed(() => dayjs(date.value).format('L LTS'))
-const computedFormat = dayjs(date.value).computedFormat('L LTS')
-
+const formatInComputed = computed(() => dayjs(date.value).format('L LTS'), {
+	onTrigger: (e) => console.log('formatInComputed triggered', e),
+	onTrack: (e) => console.log('formatInComputed tracked', e),
+})
 const localDataInComputed = computed(() => dayjs(date.value).localeData().longDateFormat('L'))
 const monthsInComputed = computed(() => dayjs(date.value).localeData().months())
-const computedLocaleData = dayjs(date.value).computedLocaleData()
-const computedLongDateFormat = computed(() => computedLocaleData.value.longDateFormat('L'))
-const computedMonths = computed(() => computedLocaleData.value.months())
-
 const fromInComputed = computed(() => dayjs(date.value).from('2023-01-01'))
-const computedFrom = dayjs(date.value).computedFrom('2023-01-01')
 </script>
 
 <template>
@@ -43,81 +39,46 @@ const computedFrom = dayjs(date.value).computedFrom('2023-01-01')
 
 		<h3>Format with localized data:</h3>
 		<h4>Usage in template:</h4>
-		<div class="bold" data-test="format">{{ $dayjs(date).format('L LTS') }}</div>
+		<div class="bold" data-test="format"> {{ $dayjs(date).format('L LTS') }} </div>
+		<in-slot data-test="format-in-slot">{{ $dayjs(date).format('L LTS') }}</in-slot>
 		<code>$dayjs(date).format('L LTS')</code>
 		<div class="bold" data-test="df">{{ $df(date, 'L LTS') }}</div>
+		<in-slot data-test="df-in-slot">{{ $df(date, 'L LTS') }}</in-slot>
 		<code>$df(date, 'L LTS')</code>
 		<h4>Usage in computed value:</h4>
-		<div class="bold" data-test="formatInComputed">
-			{{ formatInComputed }} <span class="red--text">(reactivity lost, do not use!)</span>
-		</div>
+		<div class="bold" data-test="formatInComputed"> {{ formatInComputed }} </div>
+		<in-slot data-test="formatInComputed-in-slot">{{ formatInComputed }}</in-slot>
 		<code>const formatInComputed = computed(() => dayjs(date.value).format('L LTS'))</code>
-		<div class="bold" data-test="computedFormat">{{ computedFormat }}</div>
-		<code>const computedFormat = dayjs(date.value).computedFormat('L LTS')</code>
 
 		<h3>RelativeTime:</h3>
 		<h4>Usage in template:</h4>
 		<div class="bold" data-test="from">{{ $dayjs(date).from('2023-01-01') }}</div>
+		<in-slot data-test="from-in-slot">{{ $dayjs(date).from('2023-01-01') }}</in-slot>
 		<code>$dayjs(date).from('2023-01-01')</code>
 		<h4>Usage in computed value:</h4>
-		<div class="bold" data-test="fromInComputed">
-			{{ fromInComputed }} <span class="red--text">(reactivity lost, do not use!)</span>
-		</div>
-		<code> const fromInComputed = computed(() => dayjs(date.value).from('2023-01-01')) </code>
-		<div class="bold" data-test="computedFrom">
-			{{ computedFrom }}
-		</div>
-		<code> const computedFrom = dayjs(date.value).computedFrom('2023-01-01') </code>
+		<div class="bold" data-test="fromInComputed"> {{ fromInComputed }} </div>
+		<in-slot data-test="fromInComputed-in-slot">{{ fromInComputed }}</in-slot>
+		<code>const fromInComputed = computed(() => dayjs(date.value).from('2023-01-01'))</code>
 
 		<h3>LocaleData:</h3>
 		<h4>Usage in template:</h4>
-		<div class="bold" data-test="longDateFormat">{{ $dayjs(date).localeData().longDateFormat('L') }}</div>
+		<div class="bold" data-test="longDateFormat"> {{ $dayjs(date).localeData().longDateFormat('L') }} </div>
+		<in-slot data-test="longDateFormat-in-slot">{{ $dayjs(date).localeData().longDateFormat('L') }}</in-slot>
 		<code>$dayjs(date).localeData().longDateFormat('L')</code>
 		<div class="bold" data-test="months">{{ $dayjs(date).localeData().months() }}</div>
+		<in-slot data-test="months-in-slot">{{ $dayjs(date).localeData().months() }}</in-slot>
 		<code>$dayjs(date).localeData().months()</code>
 		<h4>Usage in computed value:</h4>
-		<div class="bold" data-test="localDataInComputed">
-			{{ localDataInComputed }} <span class="red--text">(reactivity lost, do not use!)</span>
-		</div>
-		<code>
-				const localDataInComputed = computed(() => dayjs(date.value).localeData().longDateFormat('L'))
-			</code>
-		<div class="bold" data-test="computedLocaleData.longDateFormat">
-			{{ computedLocaleData.longDateFormat('L') }}
-		</div>
-		<code>
-				script: const computedLocaleData = dayjs(date.value).computedLocaleData()<br />
-				template: computedLocaleData.longDateFormat('L')
-			</code>
-		<div class="bold" data-test="computedLongDateFormat">
-			{{ computedLongDateFormat }}
-		</div>
-		<code>
-				const computedLongDateFormat = computed(() => computedLocaleData.value.longDateFormat('L'))
-			</code>
-		<div class="bold" data-test="monthsInComputed">
-			{{ monthsInComputed }} <span class="red--text">(reactivity lost, do not use!)</span>
-		</div>
-		<code> const monthsInComputed = computed(() => dayjs(date.value).localeData().months()) </code>
-		<div class="bold" data-test="localDataInComputed.months">
-			{{ computedLocaleData.months() }}
-		</div>
-		<code>
-				script: const computedLocaleData = dayjs(date.value).computedLocaleData()<br />
-				template: computedLocaleData.months()
-			</code>
-		<div class="bold" data-test="computedMonths">
-			{{ computedMonths }}
-		</div>
-		<code> const computedMonths = computed(() => computedLocaleData.value.months()) </code>
+		<div class="bold" data-test="localDataInComputed"> {{ localDataInComputed }} </div>
+		<in-slot data-test="localDataInComputed-in-slot">{{ localDataInComputed }}</in-slot>
+		<code>const localDataInComputed = computed(() => dayjs(date.value).localeData().longDateFormat('L'))</code>
+		<div class="bold" data-test="monthsInComputed"> {{ monthsInComputed }} </div>
+		<in-slot data-test="monthsInComputed-in-slot">{{ monthsInComputed }}</in-slot>
+		<code>const monthsInComputed = computed(() => dayjs(date.value).localeData().months())</code>
 	</div>
 </template>
 
-<style>
-table {
-	width: 500px;
-}
-
+<style scoped>
 .bold {
 	font-weight: bold;
 }
@@ -126,10 +87,7 @@ div {
 	margin-top: 8px;
 }
 
-.red--text {
-	color: red;
+in-slot {
+	margin-left: 20px;
 }
-
-.green--text {
-	color: red;
-}</style>
+</style>

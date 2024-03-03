@@ -87,9 +87,8 @@ Original dayjs function lost reactivity in computed value and does not change wh
 ### Localized format
 
 ```ts
-const formatInComputed = computed(() => dayjs(new Date()).format('L LTS')) // lost reactivity, do not use!
-const computedFormat = dayjs(new Date()).computedFormat('L LTS') // still reactive
-const formatedWelcome = computed(() => `Welcome at ${dayjs().computedFormat('L LTS')}`) // still reactive
+const formatInComputed = computed(() => dayjs(new Date()).format('L LTS'))
+// still reactive, format result value changes when locale is changed by i18n.setLocale
 ```
 
 ### Relative time
@@ -97,40 +96,39 @@ const formatedWelcome = computed(() => `Welcome at ${dayjs().computedFormat('L L
 #### computedFrom
 
 ```ts
-const fromInComputed = computed(() => dayjs(new Date()).from('2023-01-01')) // lost reactivity, do not use!
-const computedFrom = dayjs(new Date()).computedFrom('2023-01-01') // still reactive
+const fromInComputed = computed(() => dayjs(new Date()).from('2023-01-01'))
+// still reactive, from result value changes when locale is changed by i18n.setLocale
 ```
 
 #### computedFromNow
 
 ```ts
-const fromNowInComputed = computed(() => dayjs(new Date()).fromNow()) // lost reactivity, do not use!
-const computedFromNow = dayjs(new Date()).computedFromNow() // still reactive
+const fromNowInComputed = computed(() => dayjs(new Date()).fromNow())
+// still reactive, fromNow result value changes when locale is changed by i18n.setLocale
 ```
 
 #### computedTo
 
 ```ts
-const toInComputed = computed(() => dayjs(new Date()).to('2023-01-01')) // lost reactivity, do not use!
-const computedTo = dayjs(new Date()).computedTo('2023-01-01') // still reactive
+const toInComputed = computed(() => dayjs(new Date()).to('2023-01-01'))
+// still reactive, to result value changes when locale is changed by i18n.setLocale
 ```
 
 #### computedToNow
 
 ```ts
-const toNowInComputed = computed(() => dayjs(new Date()).toNow()) // lost reactivity, do not use!
-const computedToNow = dayjs(new Date()).computedToNow() // still reactive
+const toNowInComputed = computed(() => dayjs(new Date()).toNow())
+// still reactive, toNow result value changes when locale is changed by i18n.setLocale
 ```
 
 ### Locale data
 
 ```ts
-const monthsInComputed = computed(() => dayjs.localeData().months()) // lost reactivity, do not use!
-const computedMonths = dayjs.computedLocaleData().months() // still reactive
-const nameOfFirstMonth = computed(() => dayjs.computedLocaleData().months()[0]) // still reactive
+const monthsInComputed = computed(() => dayjs.localeData().months())
+// still reactive, months result value changes when locale is changed by i18n.setLocale
 
-dayjs.localeData().xxxx() // lost reactivity, do not use!
-dayjs.computedLocaleData().xxxx() // still reactive
+dayjs.localeData().xxxx()
+// still reactive, result value of any function of localeData changes when locale is changed by i18n.setLocale
 ```
 
 You can check more examples in [Playground](https://stackblitz.com/edit/nuxt-dayjs-i18n)

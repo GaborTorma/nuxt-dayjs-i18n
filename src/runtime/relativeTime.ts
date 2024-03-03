@@ -1,29 +1,29 @@
+import dayjs from 'dayjs'
+import plugin from 'dayjs/plugin/relativeTime'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
 import { useDayjs } from '#dayjs'
-import dayjs from 'dayjs'
-import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
-import plugin from 'dayjs/plugin/relativeTime'
 
 export const relativeTimePlugin: typeof plugin = (option, dayjsClass, dayjsFactory) => {
-	dayjsClass.prototype.computedFrom = function (compared: dayjs.ConfigType, withoutSuffix?: boolean): ComputedRef<string> {
-		const { $i18n: i18n } = useNuxtApp()
-		return computed(() => this.locale(i18n.locale.value).from(compared, withoutSuffix))
+	const { $i18n: i18n } = useNuxtApp()
+
+	const from = dayjsClass.prototype.from
+	dayjsClass.prototype.from = function (compared: dayjs.ConfigType, withoutSuffix?: boolean): string {
+		return i18n.locale.value && from.bind(this)(compared, withoutSuffix)
 	}
 
-	dayjsClass.prototype.computedFromNow = function (withoutSuffix?: boolean): ComputedRef<string> {
-		const { $i18n: i18n } = useNuxtApp()
-		return computed(() => this.locale(i18n.locale.value).fromNow(withoutSuffix))
+	const fromNow = dayjsClass.prototype.fromNow
+	dayjsClass.prototype.fromNow = function (withoutSuffix?: boolean): string {
+		return i18n.locale.value && fromNow.bind(this)(withoutSuffix)
 	}
 
-	dayjsClass.prototype.computedTo = function (compared: dayjs.ConfigType, withoutSuffix?: boolean): ComputedRef<string> {
-		const { $i18n: i18n } = useNuxtApp()
-		return computed(() => this.locale(i18n.locale.value).to(compared, withoutSuffix))
+	const to = dayjsClass.prototype.to
+	dayjsClass.prototype.to = function (compared: dayjs.ConfigType, withoutSuffix?: boolean): string {
+		return i18n.locale.value && to.bind(this)(compared, withoutSuffix)
 	}
 
-	dayjsClass.prototype.computedToNow = function (withoutSuffix?: boolean): ComputedRef<string> {
-		const { $i18n: i18n } = useNuxtApp()
-		return computed(() => this.locale(i18n.locale.value).toNow(withoutSuffix))
+	const toNow = dayjsClass.prototype.toNow
+	dayjsClass.prototype.toNow = function (withoutSuffix?: boolean): string {
+		return i18n.locale.value && toNow.bind(this)(withoutSuffix)
 	}
 }
 
