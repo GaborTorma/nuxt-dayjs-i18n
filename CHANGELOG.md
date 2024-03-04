@@ -1,5 +1,17 @@
 # Changelog
 
+## v5.0.2
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.0.1...v5.0.2)
+
+### 🩹 Fixes
+
+- Merge provideFormat declaration file ([45649db](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/45649db))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.0.1
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.0.0...v5.0.1)
