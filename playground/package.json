@@ -1,13 +1,13 @@
 {
-	"private": true,
-	"name": "nuxt-dayjs-i18n-playground",
-	"type": "module",
-	"scripts": {
-		"dev": "nuxt dev --host",
-		"build": "nuxt build",
-		"generate": "nuxt generate"
-	},
-	"devDependencies": {
-		"nuxt": "3.6.5"
-	}
+  "name": "nuxt-dayjs-i18n-playground",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev --host",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "nuxt": "3.6.5"
+  }
 }

@@ -1,12 +1,12 @@
 {
   "name": "@gabortorma/nuxt-dayjs-i18n",
+  "type": "module",
   "version": "5.0.0",
   "description": "Extend dayjs-nuxt plugin with automatic i18n locale switching.",
+  "license": "MIT",
   "repository": {
     "url": "git+ssh://git@github.com/GaborTorma/nuxt-dayjs-i18n.git"
   },
-  "license": "MIT",
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -21,15 +21,16 @@
   ],
   "scripts": {
     "prepack": "nuxt-module-build build",
-    "dev": "nuxi dev playground --host",
+    "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build && nuxt prepare playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "pnpm lint && pnpm test && pnpm prepack && changelogen --release && npm publish --access=public && git push --follow-tags",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "cleanup": "nuxt cleanup && nuxt cleanup playground",
-    "reset": "pnpm cleanup && nuxt prepare && nuxt prepare playground && nuxt-module-build build",
+    "reset": "pnpm cleanup && pnpm dev:prepare",
     "reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && pnpm install && pnpm reset"
   },
   "dependencies": {
@@ -38,6 +39,7 @@
     "dayjs-nuxt": "2.1.9"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.7.0",
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.5",
@@ -49,6 +51,7 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.57.0",
+    "eslint-plugin-format": "^0.1.0",
     "nuxt": "3.10.3",
     "prettier": "^3.2.5",
     "vitest": "^1.3.1",

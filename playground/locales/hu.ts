@@ -1,3 +1,3 @@
 export default {
-  welcome: "Üdv!",
-};
+  welcome: 'Üdv!',
+}
