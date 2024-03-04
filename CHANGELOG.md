@@ -1,5 +1,18 @@
 # Changelog
 
+## v5.0.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.0.0...v5.0.1)
+
+### 🩹 Fixes
+
+- Use @antfu/eslint-config ([a0b1d8a](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/a0b1d8a))
+- Temporary remove lint from release ([9a987d6](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/9a987d6))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.0.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v4.0.5...v5.0.0)
