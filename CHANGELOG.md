@@ -1,5 +1,22 @@
 # Changelog
 
+## v5.1.1
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.1.0...v5.1.1)
+
+### 🩹 Fixes
+
+- Badges ([47dc11f](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/47dc11f))
+- Eol-last for package.json ([a61f9ab](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/a61f9ab))
+
+### 🏡 Chore
+
+- Upgrade deps. ([e3d6613](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/e3d6613))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.1.0
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.0.2...v5.1.0)
