@@ -1,5 +1,25 @@
 # Changelog
 
+## v5.1.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.0.2...v5.1.0)
+
+### 🚀 Enhancements
+
+- Full coverage playwright testing ([3f5ab8f](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/3f5ab8f))
+
+### 🩹 Fixes
+
+- Temporary remove lint from release" ([52b13d3](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/52b13d3))
+
+### 🏡 Chore
+
+- Upgrade deps. ([36a0312](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/36a0312))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.0.2
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.0.1...v5.0.2)
