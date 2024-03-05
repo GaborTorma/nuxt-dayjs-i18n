@@ -39,7 +39,7 @@
     "dayjs-nuxt": "2.1.9"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.7.0",
+    "@antfu/eslint-config": "^2.8.0",
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.5",
