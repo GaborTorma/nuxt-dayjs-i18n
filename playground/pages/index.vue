@@ -20,18 +20,18 @@ const formatInComputed = computed(() => dayjs(date.value).format('L LTS'), {
   onTrigger: e => console.log('formatInComputed triggered', e),
   onTrack: e => console.log('formatInComputed tracked', e),
 })
-const localDataInComputed = computed(() => dayjs(date.value).localeData().longDateFormat('L'))
-const monthsInComputed = computed(() => dayjs(date.value).localeData().months())
 const fromInComputed = computed(() => dayjs(date.value).from('2023-01-01'))
+const longDateFormatInComputed = computed(() => dayjs(date.value).localeData().longDateFormat('L'))
+const monthsInComputed = computed(() => dayjs(date.value).localeData().months())
 </script>
 
 <template>
   <div>
     <h2>
-      i18n welcome message: <span data-test="welcome"> {{ $t('welcome') }} </span>
+      i18n welcome message: <span data-testid="welcome"> {{ $t('welcome') }} </span>
     </h2>
     <h3>Select language:</h3>
-    <select v-model="locale">
+    <select v-model="locale" data-testid="locale">
       <option value="en-gb">
         en-gb
       </option>
@@ -43,79 +43,75 @@ const fromInComputed = computed(() => dayjs(date.value).from('2023-01-01'))
 
     <h3>Format with localized data:</h3>
     <h4>Usage in template:</h4>
-    <div class="bold" data-test="format">
+    <div class="bold" data-testid="format">
       {{ $dayjs(date).format('L LTS') }}
     </div>
-    <in-slot data-test="format-in-slot">
+    <in-slot data-testid="format-in-slot">
       {{ $dayjs(date).format('L LTS') }}
     </in-slot>
     <code>$dayjs(date).format('L LTS')</code>
-    <div class="bold" data-test="df">
+    <div class="bold" data-testid="df">
       {{ $df(date, 'L LTS') }}
     </div>
-    <in-slot data-test="df-in-slot">
+    <in-slot data-testid="df-in-slot">
       {{ $df(date, 'L LTS') }}
     </in-slot>
     <code>$df(date, 'L LTS')</code>
     <h4>Usage in computed value:</h4>
-    <div class="bold" data-test="formatInComputed">
+    <div class="bold" data-testid="formatInComputed">
       {{ formatInComputed }}
     </div>
-    <in-slot data-test="formatInComputed-in-slot">
+    <in-slot data-testid="formatInComputed-in-slot">
       {{ formatInComputed }}
     </in-slot>
     <code>const formatInComputed = computed(() => dayjs(date.value).format('L LTS'))</code>
 
     <h3>RelativeTime:</h3>
     <h4>Usage in template:</h4>
-    <div class="bold" data-test="from">
+    <div class="bold" data-testid="from">
       {{ $dayjs(date).from('2023-01-01') }}
     </div>
-    <div class="bold" data-test="from">
-      almafafaaa almafafaaa almafafaaa almafafaaa almafafaaa almafafaaa almafafaaa almafafaaa almafafaaa almafafaaa
-      almafafaaa almafafaaa almafafaaa
-    </div>
-    <in-slot data-test="from-in-slot">
+    <in-slot data-testid="from-in-slot">
       {{ $dayjs(date).from('2023-01-01') }}
     </in-slot>
     <code>$dayjs(date).from('2023-01-01')</code>
     <h4>Usage in computed value:</h4>
-    <div class="bold" data-test="fromInComputed">
+    <div class="bold" data-testid="fromInComputed">
       {{ fromInComputed }}
     </div>
-    <in-slot data-test="fromInComputed-in-slot">
+    <in-slot data-testid="fromInComputed-in-slot">
       {{ fromInComputed }}
     </in-slot>
     <code>const fromInComputed = computed(() => dayjs(date.value).from('2023-01-01'))</code>
 
     <h3>LocaleData:</h3>
     <h4>Usage in template:</h4>
-    <div class="bold" data-test="longDateFormat">
+    <div class="bold" data-testid="longDateFormat">
       {{ $dayjs(date).localeData().longDateFormat('L') }}
     </div>
-    <in-slot data-test="longDateFormat-in-slot">
+    <in-slot data-testid="longDateFormat-in-slot">
       {{ $dayjs(date).localeData().longDateFormat('L') }}
     </in-slot>
     <code>$dayjs(date).localeData().longDateFormat('L')</code>
-    <div class="bold" data-test="months">
+    <div class="bold" data-testid="months">
       {{ $dayjs(date).localeData().months() }}
     </div>
-    <in-slot data-test="months-in-slot">
+    <in-slot data-testid="months-in-slot">
       {{ $dayjs(date).localeData().months() }}
     </in-slot>
     <code>$dayjs(date).localeData().months()</code>
     <h4>Usage in computed value:</h4>
-    <div class="bold" data-test="localDataInComputed">
-      {{ localDataInComputed }}
+    <div class="bold" data-testid="longDateFormatInComputed">
+      {{ longDateFormatInComputed }}
     </div>
-    <in-slot data-test="localDataInComputed-in-slot">
-      {{ localDataInComputed }}
+    <in-slot data-testid="longDateFormatInComputed-in-slot">
+      {{ longDateFormatInComputed }}
     </in-slot>
     <code>const localDataInComputed = computed(() => dayjs(date.value).localeData().longDateFormat('L'))</code>
-    <div class="bold" data-test="monthsInComputed">
+    <div class="bold" data-testid="monthsInComputed">
       {{ monthsInComputed }}
     </div>
-    <in-slot data-test="monthsInComputed-in-slot">
+    <in-slot data-testid="monthsInComputed-in-slot">
       {{ monthsInComputed }}
     </in-slot>
     <code>const monthsInComputed = computed(() => dayjs(date.value).localeData().months())</code>
@@ -129,9 +125,5 @@ const fromInComputed = computed(() => dayjs(date.value).from('2023-01-01'))
 
 div {
   margin-top: 8px;
-}
-
-in-slot {
-  margin-left: 20px;
 }
 </style>
