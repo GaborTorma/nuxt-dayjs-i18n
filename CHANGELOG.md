@@ -1,5 +1,26 @@
 # Changelog
 
+## v5.2.0
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.1.1...v5.2.0)
+
+### 🚀 Enhancements
+
+- Import locales automatically based on i18n config ([4271006](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/4271006))
+
+### 🩹 Fixes
+
+- Move config to nuxt.config.ts ([21ed412](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/21ed412))
+- Add dev:preview for scripts ([eb5e95a](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/eb5e95a))
+
+### 🏡 Chore
+
+- Upgrade deps. ([ce7e569](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/ce7e569))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.1.1
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.1.0...v5.1.1)
