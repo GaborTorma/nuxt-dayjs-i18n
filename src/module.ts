@@ -1,5 +1,6 @@
+import type { LocaleObject } from '@nuxtjs/i18n'
 import type { NuxtOptions } from '@nuxt/schema'
-import { addPlugin, createResolver, defineNuxtModule, hasNuxtModule, installModule } from '@nuxt/kit'
+import { addPlugin, addTemplate, createResolver, defineNuxtModule, hasNuxtModule, installModule } from '@nuxt/kit'
 
 const computedPlugins = ['localizedFormat', 'localeData', 'relativeTime'] as const
 type TComputedPlugin = (typeof computedPlugins)[number]
@@ -9,20 +10,6 @@ export interface ModuleOptions {
   computedPlugins?: true | Array<TComputedPlugin>
   provideFormat?: boolean
   debug?: boolean
-}
-
-function getDayjsPluginOptions(options: NuxtOptions): Array<string> {
-  if (Array.isArray(options?.dayjs?.plugins))
-    return options.dayjs.plugins
-
-  for (const module of options.modules) {
-    if (Array.isArray(module)
-      && module[0] === 'dayjs-nuxt'
-      && Array.isArray(module?.[1]?.plugins)
-      && module[1].plugins.every(v => typeof v === 'string'))
-      return module[1].plugins as Array<string>
-  }
-  return []
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -60,6 +47,13 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
     addPlugin(resolver.resolve('./runtime/locale'))
 
+    const locales = getI18nLocalesOptions(nuxt.options)
+    addTemplate({
+      filename: 'dayjs.locales.ts',
+      getContents: () => generateTemplate(locales),
+      write: true,
+    })
+
     if (options.provideFormat) {
       addPlugin(resolver.resolve('./runtime/provideFormat'))
       debug(`provideFormat plugin added`)
@@ -83,3 +77,44 @@ export default defineNuxtModule<ModuleOptions>({
     })
   },
 })
+
+function getDayjsPluginOptions(options: NuxtOptions): Array<string> {
+  if (Array.isArray(options?.dayjs?.plugins))
+    return options.dayjs.plugins
+
+  for (const module of options.modules) {
+    if (Array.isArray(module)
+      && module[0] === 'dayjs-nuxt'
+      && Array.isArray(module?.[1]?.plugins)
+      && module[1].plugins.every(v => typeof v === 'string'))
+      return module[1].plugins as Array<string>
+  }
+  return []
+}
+
+function getI18nLocalesOptions(options: NuxtOptions): LocaleObject[] | string[] {
+  if (options?.i18n?.locales)
+    return options.i18n.locales
+
+  for (const module of options.modules) {
+    if (Array.isArray(module) && module[0] === '@nuxtjs/i18n')
+      return module[1].locales as Array<string>
+  }
+  return []
+}
+
+function generateTemplate(locales: LocaleObject[] | string[]): string {
+  if (locales?.length) {
+    const availableLocales = locales?.map(locale =>
+      typeof locale === 'object'
+        ? locale.code
+        : locale,
+    )
+    let template = `${availableLocales?.map(locale => `import 'dayjs/locale/${locale}'`).join('\n')}\n`
+    template += `export const locales : string[] = ['${availableLocales?.join(', ')}']`
+    return template
+  }
+  else {
+    return `export const locales : string[] = []`
+  }
+}

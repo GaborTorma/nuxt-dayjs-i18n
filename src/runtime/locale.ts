@@ -1,4 +1,5 @@
 import type { PluginFunc, locale } from 'dayjs'
+import { locales } from '#build/dayjs.locales'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
 import { useDayjs } from '#imports'
 
@@ -19,6 +20,9 @@ export default defineNuxtPlugin({
   name: 'nuxt-dayjs-i18n-plugin',
   hooks: {
     'app:created'() {
+      if (locales.length > 0)
+        console.log(`nuxt-dayjs-i18n ${locales.join(', ')} locales automatically imported`)
+
       const nuxtApp = useNuxtApp()
       const { $i18n: i18n } = nuxtApp
       const dayjs = useDayjs()
