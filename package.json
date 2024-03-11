@@ -1,7 +1,7 @@
 {
   "name": "@gabortorma/nuxt-dayjs-i18n",
   "type": "module",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "description": "Extend dayjs-nuxt plugin with automatic i18n locale switching.",
   "license": "MIT",
   "repository": {
