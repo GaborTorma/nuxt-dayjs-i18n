@@ -1,5 +1,17 @@
 # Changelog
 
+## v5.2.3
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.2...v5.2.3)
+
+### 🏡 Chore
+
+- Upgrade to @gabortorma/antfu-eslint-config and remove unused deps. ([4c16798](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/4c16798))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.2
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.1...v5.2.2)
