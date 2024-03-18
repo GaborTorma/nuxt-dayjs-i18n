@@ -3,7 +3,7 @@ import { locales } from '#build/dayjs.locales'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
 import { useDayjs } from '#imports'
 
-const localePlugin: PluginFunc = (_option, _dayjsClass, dayjsFactory) => {
+const localePlugin: PluginFunc = (option, dayjsClass, dayjsFactory) => {
   const locale = dayjsFactory.locale
   dayjsFactory.locale = function (preset?: string | ILocale): string {
     if (preset)
@@ -17,7 +17,7 @@ const localePlugin: PluginFunc = (_option, _dayjsClass, dayjsFactory) => {
 let setLocale: typeof locale | undefined
 
 export default defineNuxtPlugin({
-  name: 'nuxt-dayjs-i18n-plugin',
+  name: 'nuxt-dayjs-i18n-locale-plugin',
   hooks: {
     'app:created'() {
       if (locales.length > 0)

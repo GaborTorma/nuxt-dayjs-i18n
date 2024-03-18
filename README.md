@@ -50,38 +50,33 @@ You can specify the plugins, set ato provide format function and debug
 
 ```js
 export default defineNuxtConfig({
-  ...
   i18n: {
     locales: [{
-        code: 'en-gb',
-        iso: 'en-GB',
-        file: 'en-gb.ts',
-        name: 'English',
-      },
-      {
-        // use same code with dayjs locale file names:
-        // https://github.com/iamkun/dayjs/tree/dev/src/locale
-        code: 'hu',
-        iso: 'hu-HU',
-        file: 'hu.ts',
-        name: 'Magyar',
+      code: 'en-gb',
+      iso: 'en-GB',
+      file: 'en-gb.ts',
+      name: 'English',
+    }, {
+      // use same code with dayjs locale file names:
+      // https://github.com/iamkun/dayjs/tree/dev/src/locale
+      code: 'hu',
+      iso: 'hu-HU',
+      file: 'hu.ts',
+      name: 'Magyar',
     }],
-    ...
   },
-  dayjs : {
+  dayjs: {
     // locales: ['en-gb', 'hu'],
     // locales not needed, it automatically comes from i18n
 
     // defaultLocale: 'en'
     // !! don't use defaultLocale, it comes from i18n
-    ...
   },
   dayjsI18n: {
     computedPlugins: true, // you can specify in array: ['localiztedFormat', 'relativeTime', 'localeData']
     provideFormat: true, // provide $df for Vue
     debug: false,
   }
-  ...
 })
 ```
 

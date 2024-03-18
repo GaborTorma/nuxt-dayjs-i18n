@@ -4,7 +4,7 @@ import type plugin from 'dayjs/plugin/relativeTime'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
 import { useDayjs } from '#dayjs'
 
-export const relativeTimePlugin: typeof plugin = (_option, dayjsClass, _dayjsFactory) => {
+export const relativeTimePlugin: typeof plugin = (option, dayjsClass) => {
   const { $i18n: i18n } = useNuxtApp()
 
   const from = dayjsClass.prototype.from
@@ -29,7 +29,7 @@ export const relativeTimePlugin: typeof plugin = (_option, dayjsClass, _dayjsFac
 }
 
 export default defineNuxtPlugin({
-  name: 'nuxt-dayjs-i18n-computed-relativeTime-plugin',
+  name: 'nuxt-dayjs-i18n-computed-relative-time-plugin',
   hooks: {
     'app:created'() {
       useDayjs().extend(relativeTimePlugin)

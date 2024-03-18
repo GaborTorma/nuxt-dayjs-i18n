@@ -15,7 +15,7 @@ export const localeDataPlugin: typeof plugin = (option, dayjsClass, dayjsFactory
 }
 
 export default defineNuxtPlugin({
-  name: 'nuxt-dayjs-i18n-computed-localeData-plugin',
+  name: 'nuxt-dayjs-i18n-computed-locale-data-plugin',
   hooks: {
     'app:created'() {
       useDayjs().extend(localeDataPlugin)
