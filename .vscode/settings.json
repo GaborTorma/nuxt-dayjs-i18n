@@ -21,10 +21,10 @@
   "editor.formatOnSave": false,
 
   // Auto fix
-  "editor.codeActionsOnSave": {
+  /* "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
-  },
+  }, */
 
   // Volar formatter
   "html.format.wrapLineLength": 120,
@@ -32,10 +32,10 @@
   "typescript.suggest.autoImports": false,
 
   "html.format.wrapAttributes": "preserve",
-  "[vue]": {
+  /* "[vue]": {
     "editor.defaultFormatter": "Vue.volar",
     "editor.formatOnSave": true
-  },
+  }, */
 
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [

@@ -1,10 +1,20 @@
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/eslint',
     '../src/module',
     'dayjs-nuxt',
     '@nuxtjs/i18n',
     ['@nuxt/devtools', { enabled: false }],
   ],
+
+  eslint: {
+    checker: {
+      eslintPath: 'eslint/use-at-your-own-risk',
+    },
+    config: {
+      standalone: false,
+    },
+  },
 
   i18n: {
     locales: [
