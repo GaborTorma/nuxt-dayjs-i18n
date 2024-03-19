@@ -1,5 +1,22 @@
 # Changelog
 
+## v5.2.4
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.3...v5.2.4)
+
+### 🩹 Fixes
+
+- Workaround comment ([0a00ddc](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/0a00ddc))
+
+### 🏡 Chore
+
+- Use @nuxt/eslint ([927b2c5](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/927b2c5))
+- Upgrade all deps ([aa176f5](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/aa176f5))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.3
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.2...v5.2.3)
