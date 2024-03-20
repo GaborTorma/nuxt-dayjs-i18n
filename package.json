@@ -41,8 +41,8 @@
     "dayjs-nuxt": "2.1.9"
   },
   "devDependencies": {
-    "@gabortorma/antfu-eslint-config": "^0.1.5",
-    "@nuxt/devtools": "^1.0.8",
+    "@gabortorma/antfu-eslint-config": "^0.2.1",
+    "@nuxt/devtools": "^1.1.0",
     "@nuxt/eslint": "0.3.0-alpha.1",
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "3.11.1",
