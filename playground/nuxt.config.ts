@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   eslint: {
     checker: {
-      eslintPath: 'eslint/use-at-your-own-risk', // workaround for https://github.com/nuxt/eslint/issues/338
+      configType: 'flat', // workaround for https://github.com/nuxt/eslint/issues/338
     },
     config: {
       standalone: false,
