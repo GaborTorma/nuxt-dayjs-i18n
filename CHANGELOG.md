@@ -1,5 +1,21 @@
 # Changelog
 
+## v5.2.5
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.4...v5.2.5)
+
+### 🩹 Fixes
+
+- Use official workaround for @nuxt/eslint checker ([a1e9527](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/a1e9527))
+
+### 🏡 Chore
+
+- Upgrade deps. ([9412bfe](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/9412bfe))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.4
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.3...v5.2.4)
