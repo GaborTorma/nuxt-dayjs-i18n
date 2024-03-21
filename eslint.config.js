@@ -1,4 +1,4 @@
 import antfu from '@gabortorma/antfu-eslint-config'
-import nuxt from './playground/.nuxt/eslint.config.mjs'
+import withNuxt from './playground/.nuxt/eslint.config.mjs'
 
-export default antfu({}, nuxt)
+export default withNuxt(antfu({}))
