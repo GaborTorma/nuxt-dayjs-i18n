@@ -1,5 +1,17 @@
 # Changelog
 
+## v5.2.6
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.5...v5.2.6)
+
+### 🏡 Chore
+
+- Upgrade all deps. ([6fb1f2b](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/6fb1f2b))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.5
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.4...v5.2.5)
