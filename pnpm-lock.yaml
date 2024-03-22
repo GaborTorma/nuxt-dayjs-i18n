@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   '@gabortorma/antfu-eslint-config':
-    specifier: ^0.4.1
-    version: 0.4.1(@types/eslint@8.56.6)(@vue/compiler-sfc@3.4.21)(nuxt@3.11.1)(rollup@4.13.0)(typescript@5.4.3)(vite@5.2.2)(vitest@1.4.0)
+    specifier: ^0.4.2
+    version: 0.4.2(@types/eslint@8.56.6)(@vue/compiler-sfc@3.4.21)(nuxt@3.11.1)(rollup@4.13.0)(typescript@5.4.3)(vite@5.2.2)(vitest@1.4.0)
   '@nuxt/devtools':
     specifier: ^1.1.3
     version: 1.1.3(@unocss/reset@0.58.6)(floating-vue@5.2.2)(nuxt@3.11.1)(rollup@4.13.0)(unocss@0.58.6)(vite@5.2.2)(vue@3.4.21)
@@ -1048,8 +1048,8 @@ packages:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
     dev: true
 
-  /@gabortorma/antfu-eslint-config@0.4.1(@types/eslint@8.56.6)(@vue/compiler-sfc@3.4.21)(nuxt@3.11.1)(rollup@4.13.0)(typescript@5.4.3)(vite@5.2.2)(vitest@1.4.0):
-    resolution: {integrity: sha512-fGaoy0+VyyZS056LlLfelVOauJyK8UO5eBfvY/VUuQf86YZlmClbfNxke8M+MH3OGPuEcGFCUFZQQiAWfMNj+A==}
+  /@gabortorma/antfu-eslint-config@0.4.2(@types/eslint@8.56.6)(@vue/compiler-sfc@3.4.21)(nuxt@3.11.1)(rollup@4.13.0)(typescript@5.4.3)(vite@5.2.2)(vitest@1.4.0):
+    resolution: {integrity: sha512-iW7CZnQyU6a7fQ6A6w73jWoINd+AmZx+3WehScqDqRKskzmezrONVvlKqy1vX9mmPpAdFjg5kRPF7iVw5ORU7w==}
     dependencies:
       '@antfu/eslint-config': 2.9.0(@vue/compiler-sfc@3.4.21)(eslint-plugin-format@0.1.0)(eslint@8.57.0)(typescript@5.4.3)(vitest@1.4.0)
       '@nuxt/eslint': 0.3.0-beta.3(eslint@8.57.0)(nuxt@3.11.1)(rollup@4.13.0)(typescript@5.4.3)(vite-plugin-eslint2@4.4.0)(vite@5.2.2)
