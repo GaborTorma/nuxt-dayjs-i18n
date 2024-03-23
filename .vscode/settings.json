@@ -21,10 +21,10 @@
   "editor.formatOnSave": false,
 
   // Auto fix
-  /* "editor.codeActionsOnSave": {
+  "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
-  }, */
+  },
 
   // Volar formatter
   "html.format.wrapLineLength": 120,
