@@ -24,7 +24,10 @@
       "name": "server: nuxt",
       "command": "npm run dev",
       "request": "launch",
-      "type": "node-terminal"
+      "type": "node-terminal",
+      "env": {
+        "CONSOLA_LEVEL": "4"
+      }
     }
   ],
   "compounds": [

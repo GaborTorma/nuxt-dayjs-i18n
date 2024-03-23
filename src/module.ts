@@ -1,6 +1,6 @@
 import type { LocaleObject } from '@nuxtjs/i18n'
 import type { NuxtOptions } from '@nuxt/schema'
-import { addPlugin, addTemplate, createResolver, defineNuxtModule, hasNuxtModule, installModule } from '@nuxt/kit'
+import { addPlugin, addTemplate, createResolver, defineNuxtModule, hasNuxtModule, installModule, useLogger } from '@nuxt/kit'
 
 const computedPlugins = ['localizedFormat', 'localeData', 'relativeTime'] as const
 type TComputedPlugin = (typeof computedPlugins)[number]
@@ -9,7 +9,6 @@ type TComputedPlugin = (typeof computedPlugins)[number]
 export interface ModuleOptions {
   computedPlugins?: true | Array<TComputedPlugin>
   provideFormat?: boolean
-  debug?: boolean
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -24,10 +23,9 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     computedPlugins: true,
     provideFormat: true,
-    debug: false,
   },
   async setup(options, nuxt) {
-    const debug = (message: string) => options.debug && console.log(`nuxt-dayjs-i18n: ${message}`)
+    const { debug } = useLogger('nuxt-dayjs-i18n')
     debug('setup started')
 
     // check module dependencies

@@ -38,7 +38,6 @@ export default defineNuxtConfig({
   dayjsI18n: {
     // computed: ['localizedFormat', 'relativeTime'],
     // provideFormat: false,
-    debug: true,
   },
 
   vite: {

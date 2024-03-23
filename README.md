@@ -46,7 +46,7 @@ export default defineNuxtConfig({
 
 ## Configuration
 
-You can specify the plugins, set ato provide format function and debug
+You can specify the plugins, set ato provide format function
 
 ```js
 export default defineNuxtConfig({
@@ -75,10 +75,13 @@ export default defineNuxtConfig({
   dayjsI18n: {
     computedPlugins: true, // you can specify in array: ['localiztedFormat', 'relativeTime', 'localeData']
     provideFormat: true, // provide $df for Vue
-    debug: false,
   }
 })
 ```
+
+#### Debug options removed
+
+Use [CONSOLA_LEVEL](https://github.com/unjs/consola?tab=readme-ov-file#log-level) environment variable instead.
 
 ## Basic usage
 
