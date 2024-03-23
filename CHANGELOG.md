@@ -1,5 +1,18 @@
 # Changelog
 
+## v5.2.9
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.8...v5.2.9)
+
+### 🩹 Fixes
+
+- Switch back codeActionsOnSave ([9e70abc](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/9e70abc))
+- Use CONSOLA_LEVEL instead of debug option ([63efbbc](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/63efbbc))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.8
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.7...v5.2.8)
