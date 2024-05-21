@@ -1,5 +1,19 @@
 # Changelog
 
+## v5.2.15
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.13...v5.2.15)
+
+### 🏡 Chore
+
+- Add postinstall script ([26ac83d](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/26ac83d))
+- **release:** V5.2.14 ([ff8844d](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/ff8844d))
+- Upgrade all deps. ([b0e43ec](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/b0e43ec))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.14
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.13...v5.2.14)
