@@ -1,5 +1,9 @@
 # Changelog
 
+## v5.2.16
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.15...v5.2.16)
+
 ## v5.2.15
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.13...v5.2.15)
