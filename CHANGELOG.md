@@ -1,5 +1,17 @@
 # Changelog
 
+## v5.2.18
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.17...v5.2.18)
+
+### 🩹 Fixes
+
+- Scripts ([bb0e624](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/bb0e624))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.17
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.16...v5.2.17)
