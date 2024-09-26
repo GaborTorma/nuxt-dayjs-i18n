@@ -23,9 +23,9 @@
   "scripts": {
     "prepack": "nuxt-module-build build",
     "dev": "nuxi dev playground",
-    "dev:build": "nuxi build playground",
-    "dev:preview": "nuxi preview playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "build": "nuxi build playground",
+    "preview": "nuxi preview playground",
+    "prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "pnpm lint && pnpm test && pnpm prepack && changelogen --release && npm publish --access=public && git push --follow-tags",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -33,8 +33,7 @@
     "test:watch": "vitest watch",
     "cleanup": "nuxt cleanup && nuxt cleanup playground",
     "reset": "pnpm cleanup && pnpm dev:prepare",
-    "reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && pnpm install && pnpm reset",
-    "postinstall": "pnpm dev:prepare"
+    "reinstall": "rm -rf node_modules && rm -rf ./playground/node_modules && pnpm install && pnpm reset"
   },
   "dependencies": {
     "@nuxt/kit": "^3.13.2",
