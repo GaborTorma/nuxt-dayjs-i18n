@@ -1,5 +1,22 @@
 # Changelog
 
+## v5.2.17
+
+[compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.16...v5.2.17)
+
+### 🩹 Fixes
+
+- Vscode settings ([d540625](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/d540625))
+- Debug scripts ([66de39b](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/66de39b))
+
+### 🏡 Chore
+
+- Upgrade deps. ([59a9ed7](https://github.com/GaborTorma/nuxt-dayjs-i18n/commit/59a9ed7))
+
+### ❤️ Contributors
+
+- Gábor Torma <gabor@torma.dev>
+
 ## v5.2.16
 
 [compare changes](https://github.com/GaborTorma/nuxt-dayjs-i18n/compare/v5.2.15...v5.2.16)
