@@ -1,5 +1,5 @@
-import type { LocaleObject } from '@nuxtjs/i18n'
 import type { NuxtOptions } from '@nuxt/schema'
+import type { LocaleObject } from '@nuxtjs/i18n'
 import { addPlugin, addTemplate, createResolver, defineNuxtModule, hasNuxtModule, installModule, useLogger } from '@nuxt/kit'
 
 const computedPlugins = ['localizedFormat', 'localeData', 'relativeTime'] as const
@@ -84,8 +84,9 @@ function getDayjsPluginOptions(options: NuxtOptions): Array<string> {
     if (Array.isArray(module)
       && module[0] === 'dayjs-nuxt'
       && Array.isArray(module?.[1]?.plugins)
-      && module[1].plugins.every(v => typeof v === 'string'))
-      return module[1].plugins as Array<string>
+      && module[1].plugins.every(v => typeof v === 'string')) {
+      return module[1].plugins
+    }
   }
   return []
 }

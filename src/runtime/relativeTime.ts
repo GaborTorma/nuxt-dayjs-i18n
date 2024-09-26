@@ -2,7 +2,7 @@
 import type dayjs from 'dayjs'
 import type plugin from 'dayjs/plugin/relativeTime'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
-import { useDayjs } from '#dayjs'
+import { useDayjs } from '#imports'
 
 export const relativeTimePlugin: typeof plugin = (option, dayjsClass) => {
   const { $i18n: i18n } = useNuxtApp()

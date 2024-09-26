@@ -1,8 +1,8 @@
-import type { PluginFunc, locale } from 'dayjs'
-import { consola } from 'consola'
-import { locales } from '#build/dayjs.locales'
+import type { locale, PluginFunc } from 'dayjs'
 import { defineNuxtPlugin, useNuxtApp } from '#app'
+import { locales } from '#build/dayjs.locales'
 import { useDayjs } from '#imports'
+import { consola } from 'consola'
 
 const localePlugin: PluginFunc = (option, dayjsClass, dayjsFactory) => {
   const locale = dayjsFactory.locale

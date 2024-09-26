@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url'
-import { describe, expect, it } from 'vitest'
 import { createPage, setup } from '@nuxt/test-utils/e2e'
+import { describe, expect, it } from 'vitest'
 
 interface Expected {
   en: string
@@ -29,12 +29,13 @@ async function testContent(testId: string, { hu, en }: Expected) {
   await page.close()
 }
 
+// eslint-disable-next-line antfu/no-top-level-await
 await setup({
   rootDir: fileURLToPath(new URL('../playground', import.meta.url)),
 })
 
 describe('i18n', () => {
-  it('welcome', async () => await testContent('welcome', {
+  it('welcome', async () => testContent('welcome', {
     en: 'Welcome',
     hu: 'Üdv',
   }))
@@ -46,12 +47,12 @@ describe('dayjs-format', () => {
     hu: '2023.08.11. 14:22:00',
   }
 
-  it('format', async () => await testContent('format', expected))
-  it('format-in-slot', async () => await testContent('format-in-slot', expected))
-  it('df', async () => await testContent('df', expected))
-  it('df-in-slot', async () => await testContent('df-in-slot', expected))
-  it('formatInComputed', async () => await testContent('formatInComputed', expected))
-  it('formatInComputed-in-slot', async () => await testContent('formatInComputed-in-slot', expected))
+  it('format', async () => testContent('format', expected))
+  it('format-in-slot', async () => testContent('format-in-slot', expected))
+  it('df', async () => testContent('df', expected))
+  it('df-in-slot', async () => testContent('df-in-slot', expected))
+  it('formatInComputed', async () => testContent('formatInComputed', expected))
+  it('formatInComputed-in-slot', async () => testContent('formatInComputed-in-slot', expected))
 })
 
 describe('dayjs-relativeTime', () => {
@@ -60,10 +61,10 @@ describe('dayjs-relativeTime', () => {
     hu: '7 hónap múlva',
   }
 
-  it('from', async () => await testContent('from', expected))
-  it('from-in-slot', async () => await testContent('from-in-slot', expected))
-  it('fromInComputed', async () => await testContent('fromInComputed', expected))
-  it('fromInComputed-in-slot', async () => await testContent('fromInComputed-in-slot', expected))
+  it('from', async () => testContent('from', expected))
+  it('from-in-slot', async () => testContent('from-in-slot', expected))
+  it('fromInComputed', async () => testContent('fromInComputed', expected))
+  it('fromInComputed-in-slot', async () => testContent('fromInComputed-in-slot', expected))
 })
 
 describe('dayjs-localData', () => {
@@ -73,10 +74,10 @@ describe('dayjs-localData', () => {
       hu: 'YYYY.MM.DD.',
     }
 
-    it('longDateFormat', async () => await testContent('longDateFormat', expected))
-    it('longDateFormat-in-slot', async () => await testContent('longDateFormat-in-slot', expected))
-    it('longDateFormatInComputed', async () => await testContent('longDateFormatInComputed', expected))
-    it('longDateFormatInComputed-in-slot', async () => await testContent('longDateFormatInComputed-in-slot', expected))
+    it('longDateFormat', async () => testContent('longDateFormat', expected))
+    it('longDateFormat-in-slot', async () => testContent('longDateFormat-in-slot', expected))
+    it('longDateFormatInComputed', async () => testContent('longDateFormatInComputed', expected))
+    it('longDateFormatInComputed-in-slot', async () => testContent('longDateFormatInComputed-in-slot', expected))
   })
 
   describe('months', () => {
@@ -85,9 +86,9 @@ describe('dayjs-localData', () => {
       hu: '[\n  "január",\n  "február",\n  "március",\n  "április",\n  "május",\n  "június",\n  "július",\n  "augusztus",\n  "szeptember",\n  "október",\n  "november",\n  "december"\n]',
     }
 
-    it('months', async () => await testContent('months', expected))
-    it('months-in-slot', async () => await testContent('months-in-slot', expected))
-    it('monthsInComputed', async () => await testContent('monthsInComputed', expected))
-    it('monthsInComputed-in-slot', async () => await testContent('monthsInComputed-in-slot', expected))
+    it('months', async () => testContent('months', expected))
+    it('months-in-slot', async () => testContent('months-in-slot', expected))
+    it('monthsInComputed', async () => testContent('monthsInComputed', expected))
+    it('monthsInComputed-in-slot', async () => testContent('monthsInComputed-in-slot', expected))
   })
 })

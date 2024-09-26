@@ -18,8 +18,8 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'en-gb', iso: 'en-GB', file: 'en-gb.ts', name: 'English' },
-      { code: 'hu', iso: 'hu-HU', file: 'hu.ts', name: 'Magyar' },
+      { code: 'en-gb', language: 'en-GB', file: 'en-gb.ts', name: 'English' },
+      { code: 'hu', language: 'hu-HU', file: 'hu.ts', name: 'Magyar' },
     ],
     lazy: true,
     strategy: 'no_prefix',
@@ -43,4 +43,6 @@ export default defineNuxtConfig({
   vite: {
     clearScreen: false,
   },
+
+  compatibilityDate: '2024-09-26',
 })

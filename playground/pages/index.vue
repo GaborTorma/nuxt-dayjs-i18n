@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { useI18n } from '#i18n'
 import { useDayjs } from '#dayjs'
+import { useI18n } from '#i18n'
+import { computed, ref, watch } from 'vue'
 
 function useLocale() {
   const i18n = useI18n()

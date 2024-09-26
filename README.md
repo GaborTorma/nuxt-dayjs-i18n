@@ -53,14 +53,14 @@ export default defineNuxtConfig({
   i18n: {
     locales: [{
       code: 'en-gb',
-      iso: 'en-GB',
+      language: 'en-GB',
       file: 'en-gb.ts',
       name: 'English',
     }, {
       // use same code with dayjs locale file names:
       // https://github.com/iamkun/dayjs/tree/dev/src/locale
       code: 'hu',
-      iso: 'hu-HU',
+      language: 'hu-HU',
       file: 'hu.ts',
       name: 'Magyar',
     }],
