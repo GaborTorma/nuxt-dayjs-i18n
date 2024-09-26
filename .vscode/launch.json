@@ -10,21 +10,26 @@
       "name": "client: chrome",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}",
-      "userDataDir": "C:\\ProgramData\\pwa-chrome",
-      "runtimeArgs": ["--profile-directory=CCPro", "--remote-debugging-port=9222"]
+      "userDataDir": false
     },
-    /* {
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "server: nuxt (terminal)",
+      "command": "pnpm dev",
+      "env": {
+        "CONSOLA_LEVEL": "4"
+      }
+    },
+    {
       "type": "node",
       "request": "launch",
-      "name": "server: nuxt",
+      "name": "server: nuxt (debug)",
+      "outputCapture": "std",
       "program": "${workspaceFolder}/node_modules/nuxi/bin/nuxi.mjs",
-      "args": ["dev"]
-    } */
-    {
-      "name": "server: nuxt",
-      "command": "npm run dev",
-      "request": "launch",
-      "type": "node-terminal",
+      "args": [
+        "dev"
+      ],
       "env": {
         "CONSOLA_LEVEL": "4"
       }
@@ -32,8 +37,18 @@
   ],
   "compounds": [
     {
-      "name": "fullstack: nuxt",
-      "configurations": ["client: chrome", "server: nuxt"]
+      "name": "fullstack: nuxt (terminal)",
+      "configurations": [
+        "client: chrome",
+        "server: nuxt (terminal)"
+      ]
+    },
+    {
+      "name": "fullstack: nuxt (debug)",
+      "configurations": [
+        "client: chrome",
+        "server: nuxt (debug)"
+      ]
     }
   ]
 }
